@@ -1,7 +1,7 @@
 /// <reference types="vite/client" />
 
-// Define API_URL without using import.meta.env to avoid TypeScript issues
-const API_URL = 'http://localhost:5000/api';
+// Use environment variable for API_URL, fallback to localhost for development
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 // Helper function to get auth token
 const getAuthToken = () => {
