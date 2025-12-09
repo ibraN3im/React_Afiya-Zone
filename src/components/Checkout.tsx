@@ -10,7 +10,8 @@ import { Separator } from './ui/separator';
 import { Badge } from './ui/badge';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { ArrowLeft, CreditCard, Truck, Shield, CheckCircle } from 'lucide-react';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
+import { ordersAPI } from '../services/api';
 
 const translations = {
   en: {
@@ -112,7 +113,7 @@ export function Checkout() {
   const t = translations[language];
 
   const [isProcessing, setIsProcessing] = useState(false);
-  const [deliveryOption, setDeliveryOption] = useState('standard');
+  const [deliveryOption, setDeliveryOption] = useState<'standard' | 'express' | 'overnight'>('standard');
   const [paymentMethod, setPaymentMethod] = useState('credit');
   const [sameAsBilling, setSameAsBilling] = useState(true);
 
@@ -148,11 +149,24 @@ export function Checkout() {
   });
 
   const subtotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
-  
+
   const deliveryOptions = {
     standard: { price: subtotal > 50 ? 0 : 9.99, days: '5-7' },
     express: { price: 19.99, days: '2-3' },
     overnight: { price: 39.99, days: '1' },
+  } as const;
+
+  const getShippingOptionLabel = (key: keyof typeof deliveryOptions) => {
+    switch (key) {
+      case 'standard':
+        return t.standardShipping;
+      case 'express':
+        return t.expressShipping;
+      case 'overnight':
+        return t.overnightShipping;
+      default:
+        return '';
+    }
   };
 
   const shippingCost = deliveryOptions[deliveryOption].price;
@@ -173,14 +187,54 @@ export function Checkout() {
     e.preventDefault();
     setIsProcessing(true);
 
-    // Simulate order processing
-    setTimeout(() => {
+    try {
+      // Check if user is logged in
+      if (!user) {
+        toast.error(language === 'ar' ? 'يجب تسجيل الدخول أولاً' : 'Please login first');
+        setCurrentPage('home');
+        setIsProcessing(false);
+        return;
+      }
+
+      // Prepare order data
+      const orderData = {
+        items: cart.map(item => ({
+          productId: item.id,
+          name: item.name,
+          quantity: item.quantity,
+          price: item.price,
+          image: item.image || item.images?.[0]
+        })),
+        shippingAddress: {
+          fullName: `${shippingForm.firstName} ${shippingForm.lastName}`,
+          phone: shippingForm.phone,
+          address: shippingForm.address,
+          city: shippingForm.city,
+          state: shippingForm.state,
+          zipCode: shippingForm.zipCode,
+          country: shippingForm.country
+        },
+        paymentMethod: paymentMethod === 'credit' ? 'credit_card' : paymentMethod === 'paypal' ? 'bank_transfer' : 'cash_on_delivery',
+        subtotal: subtotal,
+        shipping: shippingCost,
+        tax: tax,
+        total: total,
+        notes: `Delivery: ${deliveryOption}`
+      };
+
+      // Send order to API
+      const response = await ordersAPI.create(orderData);
+
       // Clear cart and show success
       setCart([]);
-      toast.success(t.orderSuccess);
+      toast.success(t.orderSuccess + ` (${response.orderNumber})`);
       setCurrentPage('account'); // Redirect to account to show order history
+    } catch (error: any) {
+      console.error('Order error:', error);
+      toast.error(error.message || (language === 'ar' ? 'حدث خطأ أثناء إنشاء الطلب' : 'Error creating order'));
+    } finally {
       setIsProcessing(false);
-    }, 3000);
+    }
   };
 
   const getEstimatedDelivery = () => {
@@ -339,9 +393,9 @@ export function Checkout() {
                           <div className="flex-1">
                             <Label htmlFor={key} className="cursor-pointer">
                               <div className="flex justify-between items-center">
-                                <span>{t[`${key}Shipping`]}</span>
+                                <span>{getShippingOptionLabel(key as keyof typeof deliveryOptions)}</span>
                                 <span className={option.price === 0 ? 'text-green-600' : ''}>
-                                  {option.price === 0 ? t.free : `$${option.price.toFixed(2)}`}
+                                  {option.price === 0 ? t.free : `AED ${option.price.toFixed(2)}`}
                                 </span>
                               </div>
                               <div className="text-sm text-gray-600">
@@ -461,10 +515,10 @@ export function Checkout() {
                             {item.name[language]}
                           </p>
                           <p className="text-xs text-gray-600">
-                            Qty: {item.quantity} × ${item.price}
+                            Qty: {item.quantity} × AED {item.price}
                           </p>
                         </div>
-                        <p className="text-sm">${(item.price * item.quantity).toFixed(2)}</p>
+                        <p className="text-sm">AED {(item.price * item.quantity).toFixed(2)}</p>
                       </div>
                     ))}
                   </div>
@@ -475,26 +529,26 @@ export function Checkout() {
                   <div className="space-y-2">
                     <div className="flex justify-between">
                       <span className="text-gray-600">{t.subtotal}</span>
-                      <span>${subtotal.toFixed(2)}</span>
+                      <span>AED {subtotal.toFixed(2)}</span>
                     </div>
-                    
+
                     <div className="flex justify-between">
                       <span className="text-gray-600">{t.shipping}</span>
                       <span className={shippingCost === 0 ? 'text-green-600' : ''}>
-                        {shippingCost === 0 ? t.free : `$${shippingCost.toFixed(2)}`}
+                        {shippingCost === 0 ? t.free : `AED ${shippingCost.toFixed(2)}`}
                       </span>
                     </div>
-                    
+
                     <div className="flex justify-between">
                       <span className="text-gray-600">{t.tax}</span>
-                      <span>${tax.toFixed(2)}</span>
+                      <span>AED {tax.toFixed(2)}</span>
                     </div>
-                    
+
                     <Separator />
-                    
+
                     <div className="flex justify-between">
                       <span className="text-green-800">{t.total}</span>
-                      <span className="text-xl text-green-700">${total.toFixed(2)}</span>
+                      <span className="text-xl text-green-700">AED {total.toFixed(2)}</span>
                     </div>
                   </div>
 

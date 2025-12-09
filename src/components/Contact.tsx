@@ -8,13 +8,13 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Instagram, Facebook, Twitter, Youtube } from 'lucide-react';
 import { toast } from 'sonner';
+import { messagesAPI } from '../services/api';
 
 const translations = {
   en: {
     contact: 'Contact Us',
     getInTouch: 'Get in Touch',
     getInTouchDesc: 'We\'d love to hear from you. Send us a message and we\'ll respond as soon as possible.',
-    contactForm: 'Contact Form',
     name: 'Full Name',
     email: 'Email Address',
     phone: 'Phone Number',
@@ -32,8 +32,8 @@ const translations = {
     messageSent: 'Message sent successfully! We\'ll get back to you soon.',
     contactInfo: 'Contact Information',
     address: 'Address',
-    addressValue: 'King Fahd Road, Al Olaya District\nRiyadh 12313, Saudi Arabia',
-    phoneValue: '+966 11 234 5678',
+    addressValue: 'Corniche street\nKhaliha, Abu Dhabi, UAE',
+    phoneValue: '+971 55 123 4567',
     emailValue: 'info@afiyazone.com',
     businessHours: 'Business Hours',
     hoursValue: 'Sunday - Thursday: 9:00 AM - 8:00 PM\nFriday - Saturday: 10:00 AM - 6:00 PM',
@@ -44,14 +44,13 @@ const translations = {
     viewFaq: 'View FAQ',
     support: 'Customer Support',
     supportDesc: 'Need immediate help? Our support team is here for you.',
-    liveChat: 'Start Live Chat',
-    whatsapp: 'WhatsApp Support',
+    // liveChat: 'Start Live Chat',
+    // whatsapp: 'WhatsApp Support',
   },
   ar: {
     contact: 'تواصل معنا',
     getInTouch: 'تواصل معنا',
     getInTouchDesc: 'نحب أن نسمع منك. أرسل لنا رسالة وسنرد عليك في أقرب وقت ممكن.',
-    contactForm: 'نموذج التواصل',
     name: 'الاسم الكامل',
     email: 'عنوان البريد الإلكتروني',
     phone: 'رقم الهاتف',
@@ -69,8 +68,8 @@ const translations = {
     messageSent: 'تم إرسال الرسالة بنجاح! سنعود إليك قريباً.',
     contactInfo: 'معلومات التواصل',
     address: 'العنوان',
-    addressValue: 'طريق الملك فهد، حي العليا\nالرياض 12313، المملكة العربية السعودية',
-    phoneValue: '+966 11 234 5678',
+    addressValue: 'شارع الكورنيش ,الخالدية, أبو ظبي, الإمارات العربية المتحدة',
+    phoneValue: '+971 55 123 4567',
     emailValue: 'info@afiyazone.com',
     businessHours: 'ساعات العمل',
     hoursValue: 'الأحد - الخميس: 9:00 ص - 8:00 م\nالجمعة - السبت: 10:00 ص - 6:00 م',
@@ -81,8 +80,8 @@ const translations = {
     viewFaq: 'عرض الأسئلة الشائعة',
     support: 'دعم العملاء',
     supportDesc: 'تحتاج مساعدة فورية؟ فريق الدعم لدينا هنا من أجلك.',
-    liveChat: 'بدء محادثة مباشرة',
-    whatsapp: 'دعم واتساب',
+    // liveChat: 'بدء محادثة مباشرة',
+    // whatsapp: 'دعم واتساب',
   },
 };
 
@@ -101,10 +100,15 @@ export function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
+    if (!contactForm.name || !contactForm.email || !contactForm.message) {
+      toast.error(language === 'ar' ? 'يرجى إدخال الاسم والبريد والرسالة' : 'Please fill in name, email, and message');
+      return;
+    }
+
+    try {
+      setIsSubmitting(true);
+      await messagesAPI.send(contactForm);
       toast.success(t.messageSent);
       setContactForm({
         name: '',
@@ -113,8 +117,11 @@ export function Contact() {
         subject: '',
         message: '',
       });
+    } catch (error: any) {
+      toast.error(error.message || (language === 'ar' ? 'فشل إرسال الرسالة' : 'Failed to send message'));
+    } finally {
       setIsSubmitting(false);
-    }, 2000);
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -142,7 +149,7 @@ export function Contact() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-green-50">
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl lg:text-5xl text-green-800 mb-6">{t.contact}</h1>
@@ -157,7 +164,6 @@ export function Contact() {
           <div className="lg:col-span-2">
             <Card className="border-green-100 shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-green-800">{t.contactForm}</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -311,39 +317,40 @@ export function Contact() {
             </Card>
 
             {/* Quick Help */}
-            <Card className="border-green-100">
-              <CardHeader>
+
+            {/* <Card className="border-green-100"> */}
+            {/* <CardHeader>
                 <CardTitle className="text-xl text-green-800">{t.support}</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-gray-600 text-sm">{t.supportDesc}</p>
-                
-                <Button
+              </CardHeader> */}
+            {/* <CardContent className="space-y-4"> */}
+            {/* <p className="text-gray-600 text-sm">{t.supportDesc}</p> */}
+
+            {/* <Button
                   variant="outline"
                   size="sm"
                   className="w-full border-green-600 text-green-600 hover:bg-green-50"
                 >
                   <MessageCircle className="w-4 h-4 mr-2" />
                   {t.liveChat}
-                </Button>
-                
-                <Button
+                </Button> */}
+
+            {/* <Button
                   variant="outline"
                   size="sm"
                   className="w-full border-green-600 text-green-600 hover:bg-green-50"
                 >
                   <Phone className="w-4 h-4 mr-2" />
                   {t.whatsapp}
-                </Button>
-              </CardContent>
-            </Card>
+                </Button> */}
+            {/* </CardContent>
+            </Card> */}
 
             {/* FAQ */}
-            <Card className="border-green-100">
-              <CardHeader>
+            {/* <Card className="border-green-100"> */}
+            {/* <CardHeader>
                 <CardTitle className="text-xl text-green-800">{t.faq}</CardTitle>
-              </CardHeader>
-              <CardContent>
+              </CardHeader> */}
+            {/* <CardContent>
                 <p className="text-gray-600 text-sm mb-4">{t.faqDesc}</p>
                 <Button
                   variant="outline"
@@ -352,8 +359,8 @@ export function Contact() {
                 >
                   {t.viewFaq}
                 </Button>
-              </CardContent>
-            </Card>
+              </CardContent> */}
+            {/* </Card> */}
           </div>
         </div>
       </div>

@@ -1,7 +1,4 @@
-import React from 'react';
 import { useApp } from '../App';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
 import { Separator } from './ui/separator';
 import { Mail, Phone, MapPin, Instagram, Facebook, Twitter, Youtube, Heart, Leaf } from 'lucide-react';
 
@@ -19,6 +16,7 @@ const translations = {
     supplements: 'Supplements',
     cosmetics: 'Natural Cosmetics',
     herbal: 'Herbal Products',
+    medical: 'Medical Equipment',
     accessories: 'Wellness Accessories',
     customerService: 'Customer Service',
     faq: 'FAQ',
@@ -28,18 +26,18 @@ const translations = {
     terms: 'Terms of Service',
     sizeGuide: 'Size Guide',
     contactUs: 'Contact Us',
-    address: 'King Fahd Road, Al Olaya District, Riyadh 12313, Saudi Arabia',
-    phone: '+966 11 234 5678',
-    email: 'info@afiyazone.com',
+    address: 'Abu Dhabi-Al Khalidiya- Corniche - United Arab Emirates',
+    phone: '+917 544 652 270',
+    email: 'ibra12466@gmail.com',
     followUs: 'Follow Us',
     paymentMethods: 'Payment Methods',
     securePayment: 'Secure Payment',
     madeWith: 'Made with',
     in: 'in',
-    location: 'Saudi Arabia',
+    location: 'United Arab Emirates',
     allRights: 'All rights reserved.',
     company: 'Afiya Zone',
-    year: '2024',
+    year: '2025',
     wellness: 'Your trusted wellness partner',
   },
   ar: {
@@ -55,6 +53,7 @@ const translations = {
     supplements: 'المكملات الغذائية',
     cosmetics: 'مستحضرات التجميل الطبيعية',
     herbal: 'المنتجات العشبية',
+    medical: 'المعدات الطبية',
     accessories: 'إكسسوارات العافية',
     customerService: 'خدمة العملاء',
     faq: 'الأسئلة الشائعة',
@@ -64,19 +63,16 @@ const translations = {
     terms: 'شروط الخدمة',
     sizeGuide: 'دليل المقاسات',
     contactUs: 'اتصل بنا',
-    address: 'طريق الملك فهد، حي العليا، الرياض 12313، المملكة العربية السعودية',
-    phone: '+966 11 234 5678',
-    email: 'info@afiyazone.com',
+    address: ' أبو ظبي-الخالدية- شارع الكورنيش - الإمارات العربية المتحدة',
+    phone: '+917 544 652 270',
+    email: 'ibra12466@gmail.com',
     followUs: 'تابعنا',
     paymentMethods: 'طرق الدفع',
     securePayment: 'دفع آمن',
-    madeWith: 'صنع بـ',
-    in: 'في',
-    location: 'المملكة العربية السعودية',
-    allRights: 'جميع الحقوق محفوظة.',
-    company: 'منطقة العافية',
-    year: '2024',
-    wellness: 'شريك العافية الموثوق',
+    allRights: 'جميع الحقوق محفوظة',
+    company: 'Afiya Zone',
+    year: '2025',
+    wellness: 'Your trusted wellness partner in the UAE',
   },
 };
 
@@ -95,16 +91,17 @@ export function Footer() {
     { label: t.supplements, action: () => setCurrentPage('shop') },
     { label: t.cosmetics, action: () => setCurrentPage('shop') },
     { label: t.herbal, action: () => setCurrentPage('shop') },
+    { label: t.medical, action: () => setCurrentPage('shop') },
     { label: t.accessories, action: () => setCurrentPage('shop') },
   ];
 
   const customerService = [
-    { label: t.faq, action: () => {} },
-    { label: t.shipping, action: () => {} },
-    { label: t.returns, action: () => {} },
-    { label: t.privacy, action: () => {} },
-    { label: t.terms, action: () => {} },
-    { label: t.sizeGuide, action: () => {} },
+    { label: t.faq, action: () => { } },
+    { label: t.shipping, action: () => { } },
+    { label: t.returns, action: () => { } },
+    { label: t.privacy, action: () => { } },
+    { label: t.terms, action: () => { } },
+    { label: t.sizeGuide, action: () => { } },
   ];
 
   const socialLinks = [
@@ -115,56 +112,45 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-green-800 to-green-900 text-white">
-      <div className="container mx-auto px-4 py-16">
+    <footer >
+      <div className="container mx-auto">
         {/* Main Footer Content */}
         <div className="grid lg:grid-cols-5 gap-8 mb-12">
           {/* Company Info & Newsletter */}
           <div className="lg:col-span-2">
             <div className="mb-8">
               {/* Logo */}
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-green-500 rounded-full flex items-center justify-center mr-3">
-                  <Leaf className="w-6 h-6 text-white" />
+              {/* <div className="flex items-center mb-4">
+                <div className="w-12 h-12 flex items-center justify-center mr-3">
+                  <img 
+                    src="/src/logo/afiya-logo.jpg" 
+                    alt="Afiya Zone Logo" 
+                    className="w-8 h-8 object-contain"
+                  />
                 </div>
                 <div>
                   <h3 className="text-2xl tracking-wide">Afiya Zone</h3>
                   <p className="text-green-200 text-sm">{t.wellness}</p>
                 </div>
-              </div>
-              
+              </div> */}
+
               {/* Contact Info */}
               <div className="space-y-3 mb-8">
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-green-300 mt-0.5 flex-shrink-0" />
-                  <p className="text-green-100 text-sm leading-relaxed">{t.address}</p>
+                  <p className="location-title">{t.address}</p>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-green-300 flex-shrink-0" />
-                  <p className="text-green-100">{t.phone}</p>
+                  <p className="tel-title">{t.phone}</p>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-green-300 flex-shrink-0" />
-                  <p className="text-green-100">{t.email}</p>
+                  <p className="email-title">{t.email}</p>
                 </div>
               </div>
             </div>
 
-            {/* Newsletter Signup */}
-            <div>
-              <h4 className="text-lg mb-3">{t.newsletter}</h4>
-              <p className="text-green-200 text-sm mb-4">{t.newsletterDesc}</p>
-              <div className="flex space-x-2">
-                <Input
-                  type="email"
-                  placeholder={t.enterEmail}
-                  className="bg-white/10 border-white/20 text-white placeholder:text-green-200"
-                />
-                <Button className="bg-green-600 hover:bg-green-500 text-white px-6">
-                  {t.subscribe}
-                </Button>
-              </div>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -183,19 +169,7 @@ export function Footer() {
               ))}
             </ul>
 
-            <h4 className="text-lg mb-6 mt-8">Categories</h4>
-            <ul className="space-y-3">
-              {categories.map((category, index) => (
-                <li key={index}>
-                  <button
-                    onClick={category.action}
-                    className="text-green-200 hover:text-white transition-colors text-sm"
-                  >
-                    {category.label}
-                  </button>
-                </li>
-              ))}
-            </ul>
+
           </div>
 
           {/* Customer Service */}
@@ -234,13 +208,13 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <div className="w-8 h-5 bg-white rounded flex items-center justify-center">
-                  <span className="text-xs text-gray-800">VISA</span>
+                  <span className="text-xs text-gray-800 font-medium">VISA</span>
                 </div>
                 <div className="w-8 h-5 bg-white rounded flex items-center justify-center">
-                  <span className="text-xs text-gray-800">MC</span>
+                  <span className="text-xs text-gray-800 font-medium">MC</span>
                 </div>
                 <div className="w-8 h-5 bg-blue-600 rounded flex items-center justify-center">
-                  <span className="text-xs text-white">PP</span>
+                  <span className="text-xs text-white font-medium">PP</span>
                 </div>
               </div>
               <p className="text-green-200 text-sm flex items-center">
@@ -257,13 +231,7 @@ export function Footer() {
         <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
           <div className="text-center lg:text-left">
             <p className="text-green-200 text-sm">
-              © {t.year} {t.company}. {t.allRights}
-            </p>
-          </div>
-          
-          <div className="text-center lg:text-right">
-            <p className="text-green-200 text-sm flex items-center justify-center lg:justify-end">
-              {t.madeWith} <Heart className="w-4 h-4 text-red-400 mx-1" /> {t.in} {t.location}
+              © {t.year} {t.company} | {t.allRights}
             </p>
           </div>
         </div>

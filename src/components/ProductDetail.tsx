@@ -1,117 +1,114 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useApp } from '../App';
 import { Button } from './ui/button';
-import { Card, CardContent } from './ui/card';
 import { Badge } from './ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
+import { Star, ShoppingCart, Heart, Share2, Minus, Plus } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import { Star, Heart, Share2, Minus, Plus, ArrowLeft, ShoppingCart } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
+import { Card, CardContent } from './ui/card';
 import { toast } from 'sonner';
+import { productsAPI } from '../services/api';
 
 const translations = {
   en: {
     backToShop: 'Back to Shop',
+    inStock: 'In Stock',
+    outOfStock: 'Out of Stock',
+    quantity: 'Quantity',
     addToCart: 'Add to Cart',
     addToWishlist: 'Add to Wishlist',
     share: 'Share',
-    quantity: 'Quantity',
-    inStock: 'In Stock',
-    outOfStock: 'Out of Stock',
     description: 'Description',
     benefits: 'Benefits',
-    usage: 'Usage Instructions',
+    usage: 'Usages',
     ingredients: 'Ingredients',
-    reviews: 'Reviews',
     specifications: 'Specifications',
     relatedProducts: 'Related Products',
-    writeReview: 'Write a Review',
-    seeAllReviews: 'See All Reviews',
-    addedToCart: 'Added to cart successfully!',
-    addedToWishlist: 'Added to wishlist!',
+    addedToCart: 'Product added to cart successfully!',
+    addedToWishlist: 'Product added to wishlist!',
     selectQuantity: 'Select quantity',
+    loading: 'Loading product...',
+    error: 'Failed to load product',
+    features: 'Features',
+    category: 'Category',
+    price: 'Price',
+    originalPrice: 'Original Price',
+    discount: 'Discount',
+    stock: 'Stock',
+    createdAt: 'Added On',
+    updatedAt: 'Last Updated',
+    noFeatures: 'No features available',
+    noBenefits: 'No benefits available',
+    noIngredients: 'No ingredients listed',
+    noUsageInstructions: 'No usage instructions provided',
   },
   ar: {
-    backToShop: 'العودة للمتجر',
-    addToCart: 'أضف للسلة',
-    addToWishlist: 'أضف للمفضلة',
-    share: 'مشاركة',
-    quantity: 'الكمية',
+    backToShop: 'العودة إلى المتجر',
     inStock: 'متوفر',
     outOfStock: 'غير متوفر',
+    quantity: 'الكمية',
+    addToCart: 'أضف للسلة',
+    addToWishlist: 'أضف إلى قائمة الأمنيات',
+    share: 'مشاركة',
     description: 'الوصف',
     benefits: 'الفوائد',
-    usage: 'تعليمات الاستخدام',
+    usage: 'طريقة الاستخدام',
     ingredients: 'المكونات',
-    reviews: 'التقييمات',
     specifications: 'المواصفات',
     relatedProducts: 'منتجات ذات صلة',
-    writeReview: 'اكتب تقييم',
-    seeAllReviews: 'عرض جميع التقييمات',
     addedToCart: 'تم إضافة المنتج للسلة بنجاح!',
     addedToWishlist: 'تم إضافة المنتج للمفضلة!',
     selectQuantity: 'اختر الكمية',
-  },
-};
-
-// Sample product data with multiple images
-const sampleProduct = {
-  id: 1,
-  name: { en: 'Vitamin D3 + K2 Premium', ar: 'فيتامين د3 + ك2 بريميوم' },
-  price: 29.99,
-  originalPrice: 39.99,
-  rating: 4.8,
-  reviews: 152,
-  inStock: true,
-  images: [
-    'https://images.unsplash.com/photo-1734607402858-a10164ded7a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuYXR1cmFsJTIwc3VwcGxlbWVudHMlMjB2aXRhbWluc3xlbnwxfHx8fDE3NTkwNzU2MjF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    'https://images.unsplash.com/photo-1714411892980-d1fa234f61ec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWxsbmVzcyUyMHN1cHBsZW1lbnQlMjBib3R0bGV8ZW58MXx8fHwxNzU5MDc1NzQ5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    'https://images.unsplash.com/photo-1671492241057-e0ad01ceb1c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWxsbmVzcyUyMG5hdHVyYWwlMjBwcm9kdWN0cyUyMHNwYXxlbnwxfHx8fDE3NTkwNzU2MTl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-  ],
-  category: 'supplements',
-  badge: { en: 'Best Seller', ar: 'الأكثر مبيعاً' },
-  description: {
-    en: 'Our premium Vitamin D3 + K2 supplement combines the power of vitamin D3 with vitamin K2 for optimal bone health and calcium absorption. Made with high-quality, natural ingredients and third-party tested for purity.',
-    ar: 'مكمل فيتامين د3 + ك2 المميز يجمع بين قوة فيتامين د3 وفيتامين ك2 لصحة العظام المثلى وامتصاص الكالسيوم. مصنوع من مكونات طبيعية عالية الجودة ومختبر من طرف ثالث للنقاء.',
-  },
-  benefits: {
-    en: [
-      'Supports bone health and density',
-      'Enhances calcium absorption',
-      'Boosts immune system function',
-      'Promotes cardiovascular health',
-      'Supports muscle function'
-    ],
-    ar: [
-      'يدعم صحة وكثافة العظام',
-      'يعزز امتصاص الكالسيوم',
-      'يقوي وظائف الجهاز المناعي',
-      'يعزز صحة القلب والأوعية الدموية',
-      'يدعم وظائف العضلات'
-    ],
-  },
-  usage: {
-    en: 'Take 1 capsule daily with food, or as directed by your healthcare professional. Best taken with a fat-containing meal for optimal absorption.',
-    ar: 'تناول كبسولة واحدة يومياً مع الطعام، أو حسب توجيهات أخصائي الرعاية الصحية. يُفضل تناولها مع وجبة تحتوي على دهون للامتصاص الأمثل.',
-  },
-  ingredients: {
-    en: 'Vitamin D3 (Cholecalciferol) 2000 IU, Vitamin K2 (MK-7) 100 mcg, Organic Coconut Oil, Gelatin Capsule, Purified Water',
-    ar: 'فيتامين د3 (كولي كالسيفيرول) 2000 وحدة دولية، فيتامين ك2 (MK-7) 100 ميكروغرام، زيت جوز الهند العضوي، كبسولة الجيلاتين، ماء مقطر',
+    loading: 'جارٍ تحميل المنتج...',
+    error: 'فشل تحميل المنتج',
+    features: 'الميزات',
+    category: 'الفئة',
+    price: 'السعر',
+    originalPrice: 'السعر الأصلي',
+    discount: 'الخصم',
+    stock: 'المخزون',
+    createdAt: 'تاريخ الإضافة',
+    updatedAt: 'آخر تحديث',
+    noFeatures: 'لا توجد ميزات متاحة',
+    noBenefits: 'لا توجد فوائد متاحة',
+    noIngredients: 'لم يتم إدراج مكونات',
+    noUsageInstructions: 'لم يتم توفير تعليمات الاستخدام',
   },
 };
 
 export function ProductDetail() {
-  const { language, setCurrentPage, selectedProduct, cart, setCart } = useApp();
+  const { language, setCurrentPage, selectedProduct: contextSelectedProduct, cart, setCart } = useApp();
   const t = translations[language];
-  
-  const product = selectedProduct || sampleProduct;
+
+  const [product, setProduct] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
 
+  // Fetch product data if we have an ID but no product data
+  useEffect(() => {
+    const fetchProduct = async () => {
+      // If we already have product data from context, use it
+      if (contextSelectedProduct) {
+        setProduct(contextSelectedProduct);
+        setLoading(false);
+        return;
+      }
+
+      // If no product data is available, show error
+      setError(t.error);
+      setLoading(false);
+    };
+
+    fetchProduct();
+  }, [contextSelectedProduct, t.error]);
+
   const addToCart = () => {
-    const existingItem = cart.find(item => item.id === product.id);
+    const existingItem = cart.find(item => item._id === product._id);
     if (existingItem) {
       setCart(cart.map(item =>
-        item.id === product.id
+        item._id === product._id
           ? { ...item, quantity: item.quantity + quantity }
           : item
       ));
@@ -134,110 +131,171 @@ export function ProductDetail() {
       });
     } else {
       navigator.clipboard.writeText(window.location.href);
-      toast.success('Link copied to clipboard!');
+      toast.success(language === 'en' ? 'Link copied to clipboard!' : 'تم نسخ الرابط إلى الحافظة!');
     }
   };
 
+  const handleRatingClick = async (productId: string, ratingValue: number) => {
+    try {
+      // Send the rating to the backend
+      const response = await productsAPI.rateProduct(productId, ratingValue);
+
+      toast.success(response.message || 'Thank you for your rating!');
+    } catch (error: any) {
+      toast.error(error.message || 'Failed to submit rating. Please try again.');
+    }
+  };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-50 py-8">
+        <div className="container mx-auto px-4">
+          <div className="text-center py-12">
+            <p className="text-gray-600">{t.loading}</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (error || !product) {
+    return (
+      <div className="min-h-screen bg-gray-50 py-8">
+        <div className="container mx-auto px-4">
+          <div className="text-center py-12">
+            <p className="text-red-500">{error || t.error}</p>
+            <Button
+              onClick={() => setCurrentPage('shop')}
+              className="mt-4 bg-green-600 hover:bg-green-700"
+            >
+              {language === 'en' ? 'Back to Shop' : 'العودة إلى المتجر'}
+            </Button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen bg-gray-50 py-8">
+      <div className="container mx-auto px-4">
         {/* Back Button */}
         <Button
-          variant="ghost"
+          variant="outline"
           onClick={() => setCurrentPage('shop')}
-          className="mb-6 text-green-600 hover:text-green-700"
+          className="mb-6 border-green-600 text-green-600 hover:bg-green-50"
         >
-          <ArrowLeft className="w-4 h-4 mr-2" />
-          {t.backToShop}
+          ← {t.backToShop}
         </Button>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Product Images */}
           <div className="space-y-4">
             {/* Main Image */}
-            <div className="relative">
+            <div>
               <ImageWithFallback
-                src={product.images[currentImageIndex]}
+                src={product.images?.[currentImageIndex] || '/placeholder-product.jpg'}
                 alt={product.name[language]}
                 className="w-full h-96 lg:h-[500px] object-cover rounded-xl shadow-lg"
               />
-              {product.badge && (
+              {product.isNew && (
                 <Badge className="absolute top-4 left-4 bg-green-500 text-white">
-                  {product.badge[language]}
+                  {language === 'en' ? 'New' : 'جديد'}
                 </Badge>
               )}
-              {product.originalPrice && (
+              {product.discount && product.discount > 0 && (
                 <Badge variant="destructive" className="absolute top-4 right-4">
-                  -{Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)}%
+                  -{product.discount}%
                 </Badge>
               )}
             </div>
 
             {/* Thumbnail Images */}
-            <div className="flex space-x-2">
-              {product.images.map((image: string, index: number) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentImageIndex(index)}
-                  title={`${product.name[language]} thumbnail ${index + 1}`}
-                  aria-label={`${product.name[language]} thumbnail ${index + 1}`}
-                  className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors ${
-                    index === currentImageIndex ? 'border-green-500' : 'border-gray-200'
-                  }`}
-                >
-                  <ImageWithFallback
-                    src={image}
-                    alt={`${product.name[language]} ${index + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                </button>
-              ))}
-            </div>
+            {product.images && product.images.length > 1 && (
+              <div className="flex space-x-2 overflow-x-auto pb-2">
+                {product.images.map((image: string, index: number) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentImageIndex(index)}
+                    title={`${product.name[language]} thumbnail ${index + 1}`}
+                    aria-label={`${product.name[language]} thumbnail ${index + 1}`}
+                    className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors ${index === currentImageIndex ? 'border-green-500' : 'border-gray-200'
+                      }`}
+                  >
+                    <ImageWithFallback
+                      src={image}
+                      alt={`${product.name[language]} ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Product Info */}
           <div className="space-y-6">
             <div>
               <h1 className="text-3xl text-green-800 mb-2">{product.name[language]}</h1>
-              
+
               {/* Rating */}
               <div className="flex items-center mb-4">
                 <div className="flex items-center">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star
                       key={i}
-                      className={`w-5 h-5 ${
-                        i < Math.floor(product.rating)
-                          ? 'text-yellow-400 fill-current'
-                          : 'text-gray-300'
-                      }`}
+                      className={`w-4 h-4 cursor-pointer ${i < Math.floor(product.rating || 0)
+                        ? 'text-yellow-400 fill-current'
+                        : 'text-gray-300'
+                        }`}
+                      onClick={() => handleRatingClick(product._id, i + 1)}
                     />
                   ))}
                 </div>
                 <span className="text-gray-600 ml-2">
-                  {product.rating} ({product.reviews} reviews)
+                  {product.rating?.toFixed(1) || '0.0'} ({language === 'en' ? 'Rating' : 'تقييم'})
                 </span>
               </div>
 
               {/* Price */}
               <div className="flex items-center space-x-3 mb-4">
-                <span className="text-3xl text-green-700">${product.price}</span>
-                {product.originalPrice && (
-                  <span className="text-xl text-gray-500 line-through">
-                    ${product.originalPrice}
+                <span className="price text-3xl text-green-700">AED {product.price?.toFixed(2)}</span>
+                {product.originalPrice && product.originalPrice > product.price && (
+                  <span className="price text-xl text-gray-500 line-through">
+                    AED {product.originalPrice?.toFixed(2)}
                   </span>
+                )}
+                {product.discount && product.discount > 0 && (
+                  <Badge variant="destructive">
+                    {language === 'en' ? `${product.discount}% OFF` : `${product.discount}% خصم`}
+                  </Badge>
                 )}
               </div>
 
               {/* Stock Status */}
               <div className="mb-6">
-                <Badge 
-                  variant={product.inStock ? 'default' : 'destructive'}
-                  className={product.inStock ? 'bg-green-100 text-green-800' : ''}
+                <Badge
+                  variant={product.stock > 0 ? 'default' : 'destructive'}
+                  className={product.stock > 0 ? 'bg-green-100 text-green-800' : ''}
                 >
-                  {product.inStock ? t.inStock : t.outOfStock}
+                  {product.stock > 0 ? `${product.stock} ${language === 'en' ? 'in stock' : 'متوفر'}` : t.outOfStock}
                 </Badge>
               </div>
+
+              {/* Category */}
+              <div className="mb-4">
+                <span className="text-green-800 font-medium">{t.category}: </span>
+                <span className="text-gray-700 capitalize">
+                  {product.category?.replace('-', ' ') || 'N/A'}
+                </span>
+              </div>
+            </div>
+
+            {/* Description */}
+            <div className="prose max-w-none">
+              <p className="text-gray-700 leading-relaxed">
+                {product.description?.[language] || product.description?.en || 'No description available.'}
+              </p>
             </div>
 
             {/* Quantity Selector */}
@@ -257,7 +315,8 @@ export function ProductDetail() {
                 <Button
                   variant="outline"
                   size="sm"
-                  onClick={() => setQuantity(quantity + 1)}
+                  onClick={() => setQuantity(Math.min(product.stock || 10, quantity + 1))}
+                  disabled={product.stock > 0 ? quantity >= product.stock : false}
                   className="w-10 h-10 p-0"
                 >
                   <Plus className="w-4 h-4" />
@@ -269,14 +328,16 @@ export function ProductDetail() {
             <div className="space-y-4">
               <Button
                 size="lg"
-                className="w-full bg-green-600 hover:bg-green-700 text-white py-3"
+                className="add-to-cart-btn"
                 onClick={addToCart}
-                disabled={!product.inStock}
+                disabled={product.stock === 0}
               >
-                <ShoppingCart className="w-5 h-5 mr-2" />
-                {t.addToCart}
+                <ShoppingCart className="w-5 h-5" />
+                {product.stock === 0
+                  ? (language === 'en' ? 'Out of Stock' : 'غير متوفر')
+                  : null} {language === 'en' ? 'Add to Cart' : 'أضف إلى العربة'}
               </Button>
-              
+
               <div className="flex space-x-3">
                 <Button
                   variant="outline"
@@ -287,7 +348,7 @@ export function ProductDetail() {
                   <Heart className="w-5 h-5 mr-2" />
                   {t.addToWishlist}
                 </Button>
-                
+
                 <Button
                   variant="outline"
                   size="lg"
@@ -315,56 +376,134 @@ export function ProductDetail() {
               <TabsTrigger value="usage" className="data-[state=active]:bg-green-600 data-[state=active]:text-white">
                 {t.usage}
               </TabsTrigger>
+
               <TabsTrigger value="ingredients" className="data-[state=active]:bg-green-600 data-[state=active]:text-white">
                 {t.ingredients}
               </TabsTrigger>
             </TabsList>
-            
+
             <TabsContent value="description" className="mt-8">
               <Card>
                 <CardContent className="p-8">
                   <p className="text-gray-700 leading-relaxed text-lg">
-                    {product.description[language]}
+                    {product.description?.[language] || product.description?.en || 'No description available.'}
                   </p>
                 </CardContent>
               </Card>
             </TabsContent>
-            
+
             <TabsContent value="benefits" className="mt-8">
               <Card>
                 <CardContent className="p-8">
-                  <ul className="space-y-3">
-                    {product.benefits[language].map((benefit: string, index: number) => (
-                      <li key={index} className="flex items-start">
-                        <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span className="text-gray-700">{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  {product.benefits && product.benefits[language] && product.benefits[language].length > 0 ? (
+                    <ul className="space-y-3">
+                      {product.benefits[language].map((benefit: string, index: number) => (
+                        <li key={index} className="flex items-start">
+                          <div className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                          <span className="text-gray-700">{benefit}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="text-gray-500 italic">
+                      {language === 'en' ? t.noBenefits : t.noBenefits}
+                    </p>
+                  )}
                 </CardContent>
               </Card>
             </TabsContent>
-            
+
             <TabsContent value="usage" className="mt-8">
               <Card>
                 <CardContent className="p-8">
-                  <p className="text-gray-700 leading-relaxed text-lg">
-                    {product.usage[language]}
-                  </p>
+                  {product.usage && product.usage[language] ? (
+                    <p className="text-gray-700 leading-relaxed text-lg">
+                      {product.usage[language]}
+                    </p>
+                  ) : (
+                    <p className="text-gray-500 italic">
+                      {language === 'en' ? t.noUsageInstructions : t.noUsageInstructions}
+                    </p>
+                  )}
                 </CardContent>
               </Card>
             </TabsContent>
-            
+
             <TabsContent value="ingredients" className="mt-8">
               <Card>
                 <CardContent className="p-8">
-                  <p className="text-gray-700 leading-relaxed text-lg">
-                    {product.ingredients[language]}
-                  </p>
+                  {product.ingredients && product.ingredients[language] ? (
+                    <p className="text-gray-700 leading-relaxed text-lg">
+                      {product.ingredients[language]}
+                    </p>
+                  ) : (
+                    <p className="text-gray-500 italic">
+                      {language === 'en' ? t.noIngredients : t.noIngredients}
+                    </p>
+                  )}
                 </CardContent>
               </Card>
             </TabsContent>
           </Tabs>
+        </div>
+
+        {/* Specifications Section */}
+        <div className="mt-16">
+          <h2 className="text-2xl text-green-800 mb-6">{t.specifications}</h2>
+          <Card>
+            <CardContent className="p-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="flex justify-between py-2 border-b border-gray-100">
+                  <span className="text-gray-600">{t.category}</span>
+                  <span className="font-medium capitalize">
+                    {product.category?.replace('-', ' ') || 'N/A'}
+                  </span>
+                </div>
+                <div className="flex justify-between py-2 border-b border-gray-100">
+                  <span className="text-gray-600">{t.price}</span>
+                  <span className="font-medium">AED {product.price?.toFixed(2)}</span>
+                </div>
+                {product.originalPrice && product.originalPrice > product.price && (
+                  <div className="flex justify-between py-2 border-b border-gray-100">
+                    <span className="text-gray-600">{t.originalPrice}</span>
+                    <span className="font-medium line-through text-gray-500">
+                      AED {product.originalPrice?.toFixed(2)}
+                    </span>
+                  </div>
+                )}
+                {product.discount && product.discount > 0 && (
+                  <div className="flex justify-between py-2 border-b border-gray-100">
+                    <span className="text-gray-600">{t.discount}</span>
+                    <span className="font-medium text-red-500">
+                      {product.discount}%
+                    </span>
+                  </div>
+                )}
+                <div className="flex justify-between py-2 border-b border-gray-100">
+                  <span className="text-gray-600">{t.stock}</span>
+                  <span className={`font-medium ${product.stock > 0 ? 'text-green-600' : 'text-red-500'}`}>
+                    {product.stock > 0 ? `${product.stock} ${language === 'en' ? 'in stock' : 'متوفر'}` : t.outOfStock}
+                  </span>
+                </div>
+                <div className="flex justify-between py-2 border-b border-gray-100">
+                  <span className="text-gray-600">{t.createdAt}</span>
+                  <span className="font-medium">
+                    {product.createdAt
+                      ? new Date(product.createdAt).toLocaleDateString(language === 'en' ? 'en-US' : 'ar-SA')
+                      : 'N/A'}
+                  </span>
+                </div>
+                <div className="flex justify-between py-2 border-b border-gray-100">
+                  <span className="text-gray-600">{t.updatedAt}</span>
+                  <span className="font-medium">
+                    {product.updatedAt
+                      ? new Date(product.updatedAt).toLocaleDateString(language === 'en' ? 'en-US' : 'ar-SA')
+                      : 'N/A'}
+                  </span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </div>

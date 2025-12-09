@@ -4,7 +4,7 @@ import { Button } from './ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Minus, Plus, Trash2, ShoppingBag, ArrowLeft } from 'lucide-react';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 
 const translations = {
   en: {
@@ -36,7 +36,7 @@ const translations = {
     remove: 'إزالة',
     subtotal: 'المجموع الفرعي',
     shipping: 'الشحن',
-    tax: 'الضر��بة',
+    tax: 'الضريبة',
     total: 'المجموع',
     checkout: 'المتابعة للدفع',
     free: 'مجاني',
@@ -128,7 +128,7 @@ export function Cart() {
             {cart.map((item) => (
               <Card key={item.id} className="border-green-100">
                 <CardContent className="p-6">
-                  <div className="flex items-center space-x-4">
+                  <div className="flex flex-wrap items-center space-x-4">
                     {/* Product Image */}
                     <div className="flex-shrink-0">
                       <ImageWithFallback
@@ -140,13 +140,13 @@ export function Cart() {
 
                     {/* Product Details */}
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-lg text-green-800 mb-1">
+                      <h3 className="product-name text-lg text-green-800 mb-1">
                         {item.name[language]}
                       </h3>
-                      <p className="text-gray-600 text-sm mb-2">
-                        ${item.price} each
+                      <p className="price text-gray-600 text-sm mb-2">
+                        AED {item.price} each
                       </p>
-                      
+
                       {/* Quantity Controls */}
                       <div className="flex items-center space-x-3">
                         <span className="text-sm text-gray-600">{t.quantity}:</span>
@@ -174,8 +174,8 @@ export function Cart() {
 
                     {/* Price and Remove */}
                     <div className="text-right">
-                      <div className="text-lg text-green-700 mb-2">
-                        ${(item.price * item.quantity).toFixed(2)}
+                      <div className="price text-lg text-green-700 mb-2">
+                        AED {(item.price * item.quantity).toFixed(2)}
                       </div>
                       <Button
                         variant="ghost"
@@ -187,6 +187,7 @@ export function Cart() {
                         {t.remove}
                       </Button>
                     </div>
+
                   </div>
                 </CardContent>
               </Card>
@@ -207,25 +208,25 @@ export function Cart() {
                 <div className="space-y-3">
                   <div className="flex justify-between">
                     <span className="text-gray-600">{t.subtotal}</span>
-                    <span>${subtotal.toFixed(2)}</span>
+                    <span>AED {subtotal.toFixed(2)}</span>
                   </div>
-                  
+
                   <div className="flex justify-between">
                     <span className="text-gray-600">{t.shipping}</span>
                     <span className={shipping === 0 ? 'text-green-600' : ''}>
-                      {shipping === 0 ? t.free : `$${shipping.toFixed(2)}`}
+                      {shipping === 0 ? t.free : `AED ${shipping.toFixed(2)}`}
                     </span>
                   </div>
-                  
+
                   <div className="flex justify-between">
                     <span className="text-gray-600">{t.tax}</span>
-                    <span>${tax.toFixed(2)}</span>
+                    <span>AED {tax.toFixed(2)}</span>
                   </div>
-                  
+
                   <div className="border-t pt-3">
                     <div className="flex justify-between">
                       <span className="text-green-800">{t.total}</span>
-                      <span className="text-xl text-green-700">${total.toFixed(2)}</span>
+                      <span className="text-xl text-green-700">AED {total.toFixed(2)}</span>
                     </div>
                   </div>
                 </div>
@@ -234,30 +235,31 @@ export function Cart() {
                 {shipping > 0 && (
                   <div className="bg-green-50 p-3 rounded-lg">
                     <p className="text-sm text-green-700">
-                      Add ${(50 - subtotal).toFixed(2)} more for free shipping!
+                      Add AED {(50 - subtotal).toFixed(2)} more for free shipping!
                     </p>
                   </div>
                 )}
 
                 {/* Checkout Button */}
-                <Button
-                  size="lg"
-                  className="w-full bg-green-600 hover:bg-green-700 text-white py-3"
-                  onClick={() => setCurrentPage('checkout')}
-                >
-                  {t.checkout}
-                </Button>
+                <div className='flex justify-between'>
+                  <Button
+                    size="lg"
+                    className="w-full bg-green-600 hover:bg-green-700 text-white py-3"
+                    onClick={() => setCurrentPage('checkout')}
+                  >
+                    {t.checkout}
+                  </Button>
 
-                {/* Continue Shopping */}
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="w-full border-green-600 text-green-600 hover:bg-green-50"
-                  onClick={() => setCurrentPage('shop')}
-                >
-                  {t.continueShopping}
-                </Button>
-
+                  {/* Continue Shopping */}
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="w-full border-green-600 text-green-600 hover:bg-green-50"
+                    onClick={() => setCurrentPage('shop')}
+                  >
+                    {t.continueShopping}
+                  </Button>
+                </div>
                 {/* Security Notice */}
                 <div className="text-center text-xs text-gray-500 mt-4">
                   🔒 Secure checkout guaranteed

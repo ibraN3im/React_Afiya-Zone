@@ -1,8 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useApp } from '../App';
 import { Card, CardContent } from './ui/card';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Leaf, Heart, Shield, Users, Award, Globe } from 'lucide-react';
+
+interface TeamMember {
+  id: string;
+  name: {
+    en: string;
+    ar: string;
+  };
+  position: {
+    en: string;
+    ar: string;
+  };
+  bio: {
+    en: string;
+    ar: string;
+  };
+  image: string;
+  email?: string;
+  phone?: string;
+  department: string;
+  order: number;
+  isActive: boolean;
+}
 
 const translations = {
   en: {
@@ -80,6 +102,60 @@ const translations = {
 export function AboutUs() {
   const { language } = useApp();
   const t = translations[language];
+  const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  // Fetch team members from API
+  useEffect(() => {
+    const fetchTeamMembers = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/api/team');
+        const data = await response.json();
+        if (data.teamMembers) {
+          setTeamMembers(data.teamMembers);
+        }
+      } catch (error) {
+        console.error('Error fetching team members:', error);
+        // Fallback to static data if API fails
+        setTeamMembers([
+          {
+            id: '1',
+            name: { en: t.founderName, ar: t.founderName },
+            position: { en: t.founderTitle, ar: t.founderTitle },
+            bio: { en: t.founderBio, ar: t.founderBio },
+            image: 'https://images.unsplash.com/photo-1671492241057-e0ad01ceb1c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWxsbmVzcyUyMG5hdHVyYWwlMjBwcm9kdWN0cyUyMHNwYXxlbnwxfHx8fDE3NTkwNzU2MTl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+            department: 'management',
+            order: 1,
+            isActive: true
+          },
+          {
+            id: '2',
+            name: { en: t.teamMember1, ar: t.teamMember1 },
+            position: { en: t.teamTitle1, ar: t.teamTitle1 },
+            bio: { en: t.teamBio1, ar: t.teamBio1 },
+            image: 'https://images.unsplash.com/photo-1734607402858-a10164ded7a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuYXR1cmFsJTIwc3VwcGxlbWVudHMlMjB2aXRhbWluc3xlbnwxfHx8fDE3NTkwNzU2MjF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+            department: 'technical',
+            order: 2,
+            isActive: true
+          },
+          {
+            id: '3',
+            name: { en: t.teamMember2, ar: t.teamMember2 },
+            position: { en: t.teamTitle2, ar: t.teamTitle2 },
+            bio: { en: t.teamBio2, ar: t.teamBio2 },
+            image: 'https://images.unsplash.com/photo-1723392197044-515b81ec57cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvcmdhbmljJTIwc2tpbmNhcmUlMjBjb3NtZXRpY3N8ZW58MXx8fHwxNzU5MDc1NjI0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+            department: 'support',
+            order: 3,
+            isActive: true
+          }
+        ]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchTeamMembers();
+  }, [t.founderName, t.founderTitle, t.founderBio, t.teamMember1, t.teamTitle1, t.teamBio1, t.teamMember2, t.teamTitle2, t.teamBio2]);
 
   const values = [
     {
@@ -114,78 +190,60 @@ export function AboutUs() {
     },
   ];
 
-  const teamMembers = [
-    {
-      name: t.founderName,
-      title: t.founderTitle,
-      bio: t.founderBio,
-      image: 'https://images.unsplash.com/photo-1671492241057-e0ad01ceb1c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWxsbmVzcyUyMG5hdHVyYWwlMjBwcm9kdWN0cyUyMHNwYXxlbnwxfHx8fDE3NTkwNzU2MTl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    },
-    {
-      name: t.teamMember1,
-      title: t.teamTitle1,
-      bio: t.teamBio1,
-      image: 'https://images.unsplash.com/photo-1734607402858-a10164ded7a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuYXR1cmFsJTIwc3VwcGxlbWVudHMlMjB2aXRhbWluc3xlbnwxfHx8fDE3NTkwNzU2MjF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    },
-    {
-      name: t.teamMember2,
-      title: t.teamTitle2,
-      bio: t.teamBio2,
-      image: 'https://images.unsplash.com/photo-1723392197044-515b81ec57cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvcmdhbmljJTIwc2tpbmNhcmUlMjBjb3NtZXRpY3N8ZW58MXx8fHwxNzU5MDc1NjI0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-green-50">
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl lg:text-5xl text-green-800 mb-6">{t.aboutUs}</h1>
+        <div className="text-center mb-12">
+          <h4 className="text-green-800 mb-2">{t.aboutUs}</h4>
           <div className="w-24 h-1 bg-green-600 mx-auto"></div>
         </div>
 
         {/* Our Story Section */}
         <section className="mb-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+
+          <div className="grid lg:grid-cols-2 gap-12 our-story">
             <div>
-              <h2 className="text-3xl text-green-800 mb-6">{t.ourStory}</h2>
-              <h3 className="text-xl text-green-700 mb-4">{t.storyTitle}</h3>
-              <p className="text-gray-700 leading-relaxed mb-4">
+              <h4 className="text-green-800 mb-6">{t.ourStory}</h4>
+              <h5 className="text-green-800 mb-4">{t.storyTitle}</h5>
+              <p className="mb-4">
                 {t.storyText}
               </p>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="mb-4">
                 {t.storyText2}
               </p>
             </div>
+
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-green-200/30 to-green-300/30 rounded-3xl transform rotate-3"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-green-200/30 to-green-300/30 rounded-2xl transform"></div>
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1671492241057-e0ad01ceb1c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWxsbmVzcyUyMG5hdHVyYWwlMjBwcm9kdWN0cyUyMHNwYXxlbnwxfHx8fDE3NTkwNzU2MTl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src="https://img.freepik.com/free-vector/smart-technology-line-poster_1284-34719.jpg?semt=ais_hybrid&w=740&q=80"
                 alt="Our Story"
-                className="relative w-full h-96 object-cover rounded-3xl shadow-xl"
+                className="relative w-full h-64 object-cover rounded-3xl shadow-xl"
               />
             </div>
+
           </div>
         </section>
 
         {/* Our Mission Section */}
         <section className="mb-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mission">
             <div className="order-2 lg:order-1 relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-green-200/30 to-green-300/30 rounded-3xl transform -rotate-3"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-green-200/30 to-green-300/30 transform"></div>
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1734607402858-a10164ded7a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuYXR1cmFsJTIwc3VwcGxlbWVudHMlMjB2aXRhbWluc3xlbnwxfHx8fDE3NTkwNzU2MjF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src="https://img.freepik.com/premium-photo/examine-role-wearable-technology-promoting-health-wellness_1061852-4573.jpg?semt=ais_se_enriched&w=740&q=80"
                 alt="Our Mission"
-                className="relative w-full h-96 object-cover rounded-3xl shadow-xl"
+                className="relative w-full h-64 object-cover rounded-3xl shadow-xl"
               />
             </div>
-            <div className="order-1 lg:order-2">
-              <h2 className="text-3xl text-green-800 mb-6">{t.ourMission}</h2>
-              <h3 className="text-xl text-green-700 mb-4">{t.missionTitle}</h3>
-              <p className="text-gray-700 leading-relaxed mb-4">
+            <div className="order-1 lg:order-2 p-4">
+              <h4 className="text-green-800 mb-4">{t.ourMission}</h4>
+              <h5 className="text-green-800 mb-4">{t.missionTitle}</h5>
+              <p className="mb-4">
                 {t.missionText}
               </p>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="mb-4">
                 {t.missionText2}
               </p>
             </div>
@@ -195,19 +253,21 @@ export function AboutUs() {
         {/* Our Values Section */}
         <section className="mb-20">
           <div className="text-center mb-12">
-            <h2 className="text-3xl text-green-800 mb-4">{t.ourValues}</h2>
+            <h4 className="text-green-800 mb-4">{t.ourValues}</h4>
             <div className="w-16 h-1 bg-green-600 mx-auto"></div>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value, index) => (
               <Card key={index} className="group hover:shadow-lg transition-shadow duration-300 border-green-100">
                 <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200 transition-colors">
-                    <value.icon className="w-8 h-8 text-green-600" />
+                  <div className="about-us-value">
+                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200 transition-colors">
+                      <value.icon className="w-8 h-8 text-green-600" />
+                    </div>
+                    <h3 className="text-lg text-green-800 mb-3">{value.title}</h3>
+                    <p className="text-gray-600 leading-relaxed">{value.description}</p>
                   </div>
-                  <h3 className="text-lg text-green-800 mb-3">{value.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{value.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -217,37 +277,38 @@ export function AboutUs() {
         {/* Our Team Section */}
         <section className="mb-20">
           <div className="text-center mb-12">
-            <h2 className="text-3xl text-green-800 mb-4">{t.ourTeam}</h2>
+            <h4 className="text-green-800 mb-2 text-lg">{t.ourTeam}</h4>
             <div className="w-16 h-1 bg-green-600 mx-auto"></div>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-shadow duration-300 border-green-100">
-                <CardContent className="p-8 text-center">
-                  <div className="relative mb-6">
-                    <ImageWithFallback
-                      src={member.image}
-                      alt={member.name}
-                      className="w-32 h-32 object-cover rounded-full mx-auto shadow-lg"
-                    />
-                    <div className="absolute inset-0 w-32 h-32 bg-gradient-to-br from-green-200/20 to-green-300/20 rounded-full mx-auto"></div>
-                  </div>
-                  <h3 className="text-xl text-green-800 mb-1">{member.name}</h3>
-                  <p className="text-green-600 mb-3">{member.title}</p>
-                  <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
 
-        {/* Call to Action */}
-        <section className="text-center bg-gradient-to-r from-green-600 to-green-700 rounded-3xl py-16 px-8 text-white">
-          <h2 className="text-3xl mb-6">Welcome to Afiya Zone</h2>
-          <p className="text-xl leading-relaxed max-w-3xl mx-auto">
-            {t.joinCommunity}
-          </p>
+          {loading ? (
+            <div className="text-center py-8">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto"></div>
+              <p className="text-gray-600 mt-4">Loading team members...</p>
+            </div>
+          ) : (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {teamMembers.map((member, index) => (
+                <Card key={member.id || index} className="group hover:shadow-lg transition-shadow duration-300 border-green-100">
+                  <div className="team-container">
+                    <div className="team-image">
+                      <ImageWithFallback
+                        src={member.image}
+                        alt={member.name?.[language] || 'Team member'}
+                        className="w-32 h-32 object-cover rounded-full mx-auto shadow-lg"
+                      />
+                    </div>
+
+                    <div className="team-info">
+                      <h6 className="text-lg text-green-800 mb-4">{member.name?.[language] || ''}</h6>
+                      <p className="text-green-600 mb-3 member-position">{member.position?.[language] || ''}</p>
+                      <p className="text-gray-600 text-sm">{member.bio?.[language] || ''}</p>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          )}
         </section>
       </div>
     </div>
