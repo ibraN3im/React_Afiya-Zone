@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { toast } from 'sonner';
-import { X } from 'lucide-react';
 
 interface TeamMemberFormData {
     name: {

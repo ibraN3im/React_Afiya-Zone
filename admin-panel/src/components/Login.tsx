@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { toast } from 'sonner'
 import { authAPI } from '../api'
-import { LogIn, Shield } from 'lucide-react'
+import { LogIn } from 'lucide-react'
 
 interface LoginProps {
   onLogin: (token: string, user: any) => void
