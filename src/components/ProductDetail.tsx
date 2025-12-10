@@ -18,14 +18,14 @@ const translations = {
     addToCart: 'Add to Cart',
     addToWishlist: 'Add to Wishlist',
     share: 'Share',
-    description: 'Description',
-    benefits: 'Benefits',
+    description: 'Desc..',
+    benefits: 'Benefi..',
     usage: 'Usages',
-    ingredients: 'Ingredients',
+    ingredients: 'Ingre..',
     specifications: 'Specifications',
     relatedProducts: 'Related Products',
-    addedToCart: 'Product added to cart successfully!',
-    addedToWishlist: 'Product added to wishlist!',
+    addedToCart: 'Product added successfully!',
+    addedToWishlist: 'Product added wishlist!',
     selectQuantity: 'Select quantity',
     loading: 'Loading product...',
     error: 'Failed to load product',
@@ -48,16 +48,16 @@ const translations = {
     outOfStock: 'غير متوفر',
     quantity: 'الكمية',
     addToCart: 'أضف للسلة',
-    addToWishlist: 'أضف إلى قائمة الأمنيات',
+    addToWishlist: 'أضف إلى المفضلة',
     share: 'مشاركة',
-    description: 'الوصف',
-    benefits: 'الفوائد',
-    usage: 'طريقة الاستخدام',
-    ingredients: 'المكونات',
-    specifications: 'المواصفات',
+    description: 'وصف',
+    benefits: 'فوائد',
+    usage: ' استخدام',
+    ingredients: 'مكونات',
+    specifications: 'مواصفات',
     relatedProducts: 'منتجات ذات صلة',
-    addedToCart: 'تم إضافة المنتج للسلة بنجاح!',
-    addedToWishlist: 'تم إضافة المنتج للمفضلة!',
+    addedToCart: 'تم إضافته !',
+    addedToWishlist: 'تم إضافته !',
     selectQuantity: 'اختر الكمية',
     loading: 'جارٍ تحميل المنتج...',
     error: 'فشل تحميل المنتج',
@@ -149,7 +149,7 @@ export function ProductDetail() {
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 py-8">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="text-center py-12">
             <p className="text-gray-600">{t.loading}</p>
           </div>
@@ -161,7 +161,7 @@ export function ProductDetail() {
   if (error || !product) {
     return (
       <div className="min-h-screen bg-gray-50 py-8">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="text-center py-12">
             <p className="text-red-500">{error || t.error}</p>
             <Button
@@ -178,9 +178,10 @@ export function ProductDetail() {
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         {/* Back Button */}
         <Button
+          size="sm"
           variant="outline"
           onClick={() => setCurrentPage('shop')}
           className="mb-6 border-green-600 text-green-600 hover:bg-green-50"
@@ -192,11 +193,11 @@ export function ProductDetail() {
           {/* Product Images */}
           <div className="space-y-4">
             {/* Main Image */}
-            <div>
+            <div className="relative">
               <ImageWithFallback
                 src={product.images?.[currentImageIndex] || '/placeholder-product.jpg'}
                 alt={product.name[language]}
-                className="w-full h-96 lg:h-[500px] object-cover rounded-xl shadow-lg"
+                className="w-full lg:h-[500px] object-cover rounded-xl shadow-lg"
               />
               {product.isNew && (
                 <Badge className="absolute top-4 left-4 bg-green-500 text-white">
@@ -236,7 +237,7 @@ export function ProductDetail() {
           {/* Product Info */}
           <div className="space-y-6">
             <div>
-              <h1 className="text-3xl text-green-800 mb-2">{product.name[language]}</h1>
+              <h5 className="text-green-600 mb-2">{product.name[language]}</h5>
 
               {/* Rating */}
               <div className="flex items-center mb-4">
@@ -284,8 +285,8 @@ export function ProductDetail() {
 
               {/* Category */}
               <div className="mb-4">
-                <span className="text-green-800 font-medium">{t.category}: </span>
-                <span className="text-gray-700 capitalize">
+                <span className="text-green-600">{t.category}: </span>
+                <span className="text-gray-600 capitalize">
                   {product.category?.replace('-', ' ') || 'N/A'}
                 </span>
               </div>
@@ -293,15 +294,15 @@ export function ProductDetail() {
 
             {/* Description */}
             <div className="prose max-w-none">
-              <p className="text-gray-700 leading-relaxed">
+              <small className="text-gray-700">
                 {product.description?.[language] || product.description?.en || 'No description available.'}
-              </p>
+              </small>
             </div>
 
             {/* Quantity Selector */}
             <div className="space-y-2">
               <label className="text-green-800">{t.quantity}</label>
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center">
                 <Button
                   variant="outline"
                   size="sm"
@@ -338,10 +339,10 @@ export function ProductDetail() {
                   : null} {language === 'en' ? 'Add to Cart' : 'أضف إلى العربة'}
               </Button>
 
-              <div className="flex space-x-3">
+              <div className="flex space-x-2">
                 <Button
                   variant="outline"
-                  size="lg"
+                  size="sm"
                   className="flex-1 border-green-600 text-green-600 hover:bg-green-50"
                   onClick={addToWishlist}
                 >
@@ -351,7 +352,7 @@ export function ProductDetail() {
 
                 <Button
                   variant="outline"
-                  size="lg"
+                  size="sm"
                   className="flex-1 border-green-600 text-green-600 hover:bg-green-50"
                   onClick={shareProduct}
                 >
@@ -364,7 +365,7 @@ export function ProductDetail() {
         </div>
 
         {/* Product Details Tabs */}
-        <div className="mt-16">
+        <div className="mt-8">
           <Tabs defaultValue="description" className="w-full">
             <TabsList className="grid w-full grid-cols-4 bg-green-50">
               <TabsTrigger value="description" className="data-[state=active]:bg-green-600 data-[state=active]:text-white">
@@ -384,7 +385,7 @@ export function ProductDetail() {
 
             <TabsContent value="description" className="mt-8">
               <Card>
-                <CardContent className="p-8">
+                <CardContent className="p-2">
                   <p className="text-gray-700 leading-relaxed text-lg">
                     {product.description?.[language] || product.description?.en || 'No description available.'}
                   </p>
@@ -394,7 +395,7 @@ export function ProductDetail() {
 
             <TabsContent value="benefits" className="mt-8">
               <Card>
-                <CardContent className="p-8">
+                <CardContent className="p-2">
                   {product.benefits && product.benefits[language] && product.benefits[language].length > 0 ? (
                     <ul className="space-y-3">
                       {product.benefits[language].map((benefit: string, index: number) => (
@@ -415,7 +416,7 @@ export function ProductDetail() {
 
             <TabsContent value="usage" className="mt-8">
               <Card>
-                <CardContent className="p-8">
+                <CardContent className="p-2">
                   {product.usage && product.usage[language] ? (
                     <p className="text-gray-700 leading-relaxed text-lg">
                       {product.usage[language]}
@@ -431,7 +432,7 @@ export function ProductDetail() {
 
             <TabsContent value="ingredients" className="mt-8">
               <Card>
-                <CardContent className="p-8">
+                <CardContent className="p-2">
                   {product.ingredients && product.ingredients[language] ? (
                     <p className="text-gray-700 leading-relaxed text-lg">
                       {product.ingredients[language]}
@@ -448,54 +449,54 @@ export function ProductDetail() {
         </div>
 
         {/* Specifications Section */}
-        <div className="mt-16">
+        <div className="mt-8">
           <h2 className="text-2xl text-green-800 mb-6">{t.specifications}</h2>
           <Card>
             <CardContent className="p-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="flex justify-between py-2 border-b border-gray-100">
-                  <span className="text-gray-600">{t.category}</span>
-                  <span className="font-medium capitalize">
+                  <span>{t.category}</span>
+                  <span className="capitalize">
                     {product.category?.replace('-', ' ') || 'N/A'}
                   </span>
                 </div>
                 <div className="flex justify-between py-2 border-b border-gray-100">
-                  <span className="text-gray-600">{t.price}</span>
-                  <span className="font-medium">AED {product.price?.toFixed(2)}</span>
+                  <span>{t.price}</span>
+                  <span>AED {product.price?.toFixed(2)}</span>
                 </div>
                 {product.originalPrice && product.originalPrice > product.price && (
                   <div className="flex justify-between py-2 border-b border-gray-100">
-                    <span className="text-gray-600">{t.originalPrice}</span>
-                    <span className="font-medium line-through text-gray-500">
+                    <span>{t.originalPrice}</span>
+                    <span className="line-through text-gray-500">
                       AED {product.originalPrice?.toFixed(2)}
                     </span>
                   </div>
                 )}
                 {product.discount && product.discount > 0 && (
                   <div className="flex justify-between py-2 border-b border-gray-100">
-                    <span className="text-gray-600">{t.discount}</span>
-                    <span className="font-medium text-red-500">
+                    <span className="">{t.discount}</span>
+                    <span className="text-red-500">
                       {product.discount}%
                     </span>
                   </div>
                 )}
                 <div className="flex justify-between py-2 border-b border-gray-100">
-                  <span className="text-gray-600">{t.stock}</span>
-                  <span className={`font-medium ${product.stock > 0 ? 'text-green-600' : 'text-red-500'}`}>
+                  <span>{t.stock}</span>
+                  <span className={` ${product.stock > 0 ? 'text-green-600' : 'text-red-500'}`}>
                     {product.stock > 0 ? `${product.stock} ${language === 'en' ? 'in stock' : 'متوفر'}` : t.outOfStock}
                   </span>
                 </div>
                 <div className="flex justify-between py-2 border-b border-gray-100">
-                  <span className="text-gray-600">{t.createdAt}</span>
-                  <span className="font-medium">
+                  <span>{t.createdAt}</span>
+                  <span>
                     {product.createdAt
                       ? new Date(product.createdAt).toLocaleDateString(language === 'en' ? 'en-US' : 'ar-SA')
                       : 'N/A'}
                   </span>
                 </div>
                 <div className="flex justify-between py-2 border-b border-gray-100">
-                  <span className="text-gray-600">{t.updatedAt}</span>
-                  <span className="font-medium">
+                  <span>{t.updatedAt}</span>
+                  <span>
                     {product.updatedAt
                       ? new Date(product.updatedAt).toLocaleDateString(language === 'en' ? 'en-US' : 'ar-SA')
                       : 'N/A'}

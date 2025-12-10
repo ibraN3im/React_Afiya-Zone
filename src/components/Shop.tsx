@@ -512,12 +512,12 @@ export function Shop() {
                     {viewMode === 'list' && (
                       <div className="product-info flex flex-col justify-between flex-1">
                         <div>
-                          <h3
+                          <h4
                             className="product-title"
                             onClick={() => viewProduct(product)}
                           >
                             {product.name?.[language] || product.name?.en || 'Unnamed Product'}
-                          </h3>
+                          </h4>
                           <div className="product-description">
                             {product.description?.[language] || product.description?.en || 'No description available'}
                           </div>
@@ -542,9 +542,9 @@ export function Shop() {
                           <div className="product-price">
                             AED {product.price?.toFixed(2)}
                             {product.originalPrice && product.originalPrice > product.price && (
-                              <span className="original-price">
+                              <small className="original-price">
                                 AED {product.originalPrice?.toFixed(2)}
-                              </span>
+                              </small>
                             )}
                           </div>
                         </div>
@@ -558,7 +558,6 @@ export function Shop() {
                           {product.stock === 0
                             ? (language === 'en' ? 'Out of Stock' : 'غير متوفر')
                             : <ShoppingCart className="w-5 h-5" />}
-                          add to cart
                         </button>
 
                       </div>
@@ -567,12 +566,12 @@ export function Shop() {
                     {viewMode === 'grid' && (
                       <div className="product-info flex flex-col justify-between">
                         <div className="p-4">
-                          <h3
+                          <h4
                             className="product-title"
                             onClick={() => viewProduct(product)}
                           >
                             {product.name?.[language] || product.name?.en || 'Unnamed Product'}
-                          </h3>
+                          </h4>
 
                           <div className="product-description">
                             {product.description?.[language] || product.description?.en || 'No description available'}
@@ -599,9 +598,9 @@ export function Shop() {
                           <div className="product-price">
                             AED {product.price?.toFixed(2)}
                             {product.originalPrice && product.originalPrice > product.price && (
-                              <span className="original-price">
+                              <small className="original-price">
                                 AED {product.originalPrice?.toFixed(2)}
-                              </span>
+                              </small>
                             )}
                           </div>
                         </div>
@@ -615,7 +614,6 @@ export function Shop() {
                           {product.stock === 0
                             ? (language === 'en' ? 'Out of Stock' : 'غير متوفر')
                             : <ShoppingCart className="w-5 h-5" />}
-                          add to cart
                         </button>
 
                       </div>

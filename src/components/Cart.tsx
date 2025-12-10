@@ -86,16 +86,16 @@ export function Cart() {
   if (cart.length === 0) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center space-y-6 max-w-md mx-auto px-4">
+        <div className="text-center space-y-6 max-w-md mx-auto">
           <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto">
             <ShoppingBag className="w-12 h-12 text-green-600" />
           </div>
           <div>
-            <h2 className="text-2xl text-green-800 mb-2">{t.emptyCart}</h2>
+            <h5 className="text-2xl text-green-800 mb-2">{t.emptyCart}</h5>
             <p className="text-gray-600">{t.emptyCartDesc}</p>
           </div>
           <Button
-            size="lg"
+            size="sm"
             className="bg-green-600 hover:bg-green-700 text-white"
             onClick={() => setCurrentPage('shop')}
           >
@@ -108,7 +108,7 @@ export function Cart() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto py-8">
         {/* Header */}
         <div className="flex items-center mb-8">
           <Button
@@ -119,64 +119,64 @@ export function Cart() {
             <ArrowLeft className="w-4 h-4 mr-2" />
             {t.backToShop}
           </Button>
-          <h1 className="text-3xl text-green-800">{t.cart}</h1>
+          <h6 className="text-3xl text-green-600">{t.cart}</h6>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div>
           {/* Cart Items */}
           <div className="lg:col-span-2 space-y-4">
             {cart.map((item) => (
-              <Card key={item.id} className="border-green-100">
-                <CardContent className="p-6">
-                  <div className="flex flex-wrap items-center space-x-4">
-                    {/* Product Image */}
-                    <div className="flex-shrink-0">
-                      <ImageWithFallback
-                        src={item.image || item.images?.[0]}
-                        alt={item.name[language]}
-                        className="w-24 h-24 object-cover rounded-lg"
-                      />
+              <Card key={item.id} className="cart-cart">
+                <div className="p-2 shopping-cart items-center">
+                  {/* Product Image */}
+                  <div className="flex-shrink-0">
+                    <ImageWithFallback
+                      src={item.image || item.images?.[0]}
+                      alt={item.name[language]}
+                      className="w-64 h-32 object-cover rounded-lg"
+                    />
+                  </div>
+
+                  {/* Product Details */}
+                  <div className="flex-1">
+                    <h6 className="product-name text-lg text-green-600 mb-1">
+                      {item.name[language]}
+                    </h6>
+                    <div className="price text-gray-600 text-sm mb-2">
+                      AED {item.price} each
                     </div>
 
-                    {/* Product Details */}
-                    <div className="flex-1 min-w-0">
-                      <h3 className="product-name text-lg text-green-800 mb-1">
-                        {item.name[language]}
-                      </h3>
-                      <p className="price text-gray-600 text-sm mb-2">
-                        AED {item.price} each
-                      </p>
-
-                      {/* Quantity Controls */}
-                      <div className="flex items-center space-x-3">
+                    {/* Quantity Controls */}
+                    <div className="flex items-center space-x-3">
+                      <div>
                         <span className="text-sm text-gray-600">{t.quantity}:</span>
-                        <div className="flex items-center space-x-2">
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                            className="w-8 h-8 p-0"
-                          >
-                            <Minus className="w-3 h-3" />
-                          </Button>
-                          <span className="w-8 text-center text-sm">{item.quantity}</span>
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                            className="w-8 h-8 p-0"
-                          >
-                            <Plus className="w-3 h-3" />
-                          </Button>
-                        </div>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                          className="w-8 h-8 p-0"
+                        >
+                          <Minus className="w-3 h-3" />
+                        </Button>
+                        <span className="w-8 text-center text-sm">{item.quantity}</span>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                          className="w-8 h-8 p-0"
+                        >
+                          <Plus className="w-3 h-3" />
+                        </Button>
                       </div>
                     </div>
 
                     {/* Price and Remove */}
-                    <div className="text-right">
-                      <div className="price text-lg text-green-700 mb-2">
+                    <div className="flex items-center justify-between text-right">
+                      <p className="price text-lg text-green-700 mb-2">
                         AED {(item.price * item.quantity).toFixed(2)}
-                      </div>
+                      </p>
                       <Button
                         variant="ghost"
                         size="sm"
@@ -187,18 +187,18 @@ export function Cart() {
                         {t.remove}
                       </Button>
                     </div>
-
                   </div>
-                </CardContent>
+
+                </div>
               </Card>
             ))}
           </div>
 
           {/* Cart Summary */}
           <div className="lg:col-span-1">
-            <Card className="border-green-100 sticky top-24">
+            <Card className="cart-summary cart-cart border-green-100 sticky top-24">
               <CardHeader>
-                <CardTitle className="text-green-800">{t.cartSummary}</CardTitle>
+                <h6 className="text-green-600">{t.cartSummary}</h6>
                 <p className="text-gray-600 text-sm">
                   {totalItems} {t.items}
                 </p>
@@ -207,26 +207,26 @@ export function Cart() {
                 {/* Order Summary */}
                 <div className="space-y-3">
                   <div className="flex justify-between">
-                    <span className="text-gray-600">{t.subtotal}</span>
-                    <span>AED {subtotal.toFixed(2)}</span>
+                    <span className="text-sm">{t.subtotal}</span>
+                    <span className="text-sm">AED {subtotal.toFixed(2)}</span>
                   </div>
 
                   <div className="flex justify-between">
-                    <span className="text-gray-600">{t.shipping}</span>
-                    <span className={shipping === 0 ? 'text-green-600' : ''}>
+                    <span className="text-sm">{t.shipping}</span>
+                    <span className={shipping === 0 ? 'text-sm text-gray-600' : 'text-sm'}>
                       {shipping === 0 ? t.free : `AED ${shipping.toFixed(2)}`}
                     </span>
                   </div>
 
                   <div className="flex justify-between">
-                    <span className="text-gray-600">{t.tax}</span>
-                    <span>AED {tax.toFixed(2)}</span>
+                    <span className="text-sm">{t.tax}</span>
+                    <span className="text-sm text-gray-600">AED {tax.toFixed(2)}</span>
                   </div>
 
                   <div className="border-t pt-3">
                     <div className="flex justify-between">
-                      <span className="text-green-800">{t.total}</span>
-                      <span className="text-xl text-green-700">AED {total.toFixed(2)}</span>
+                      <span className="text-green-600">{t.total}</span>
+                      <span className="text-green-600">AED {total.toFixed(2)}</span>
                     </div>
                   </div>
                 </div>
@@ -243,7 +243,7 @@ export function Cart() {
                 {/* Checkout Button */}
                 <div className='flex justify-between'>
                   <Button
-                    size="lg"
+                    size="sm"
                     className="w-full bg-green-600 hover:bg-green-700 text-white py-3"
                     onClick={() => setCurrentPage('checkout')}
                   >
@@ -253,7 +253,7 @@ export function Cart() {
                   {/* Continue Shopping */}
                   <Button
                     variant="outline"
-                    size="lg"
+                    size="sm"
                     className="w-full border-green-600 text-green-600 hover:bg-green-50"
                     onClick={() => setCurrentPage('shop')}
                   >
@@ -261,9 +261,9 @@ export function Cart() {
                   </Button>
                 </div>
                 {/* Security Notice */}
-                <div className="text-center text-xs text-gray-500 mt-4">
+                <small className="text-center text-gray-500 mt-4">
                   🔒 Secure checkout guaranteed
-                </div>
+                </small>
               </CardContent>
             </Card>
           </div>

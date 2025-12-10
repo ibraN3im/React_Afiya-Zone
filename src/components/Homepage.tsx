@@ -156,7 +156,7 @@ export function Homepage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="hero-image relative bg-gradient-to-br from-green-50 via-white to-green-50 sm:py-8">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="space-y-6 md:space-y-8">
               <div className="space-y-4 mb-4">
@@ -166,7 +166,7 @@ export function Homepage() {
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
-                  size="lg"
+                  size="sm"
                   className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 md:px-8 md:py-3"
                   onClick={() => setCurrentPage('shop')}
                 >
@@ -181,7 +181,7 @@ export function Homepage() {
       </section>
 
       {/* Featured Products */}
-      <section className="py-7 px-4 featured-products">
+      <section className="py-7 featured-products">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8 md:mb-12">
             <h4 className="Featured text-2xl text-green-800 mb-4">{t.featuredProducts}</h4>
@@ -265,7 +265,7 @@ export function Homepage() {
                         onClick={() => addToCart(product)}
                       >
                         <ShoppingCart className="w-5 h-5" />
-                        add to cart </button>
+                      </button>
                     </div>
                   </div>
                 </div>
