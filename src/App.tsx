@@ -9,7 +9,7 @@ import { UserAccount } from './components/UserAccount';
 import { AboutUs } from './components/AboutUs';
 import { Contact } from './components/Contact';
 import { PasswordReset } from './components/PasswordReset';
-import './styles/optimized-consolidated.css';
+import './styles/final-consolidated.css';
 import { LoginModal } from './components/LoginModal';
 import { Footer } from './components/Footer';
 import { AdminDashboard } from './components/AdminDashboard';

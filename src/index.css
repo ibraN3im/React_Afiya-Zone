@@ -1026,7 +1026,8 @@
   }
 
   .w-48 {
-    width: calc(var(--spacing) * 48);
+    /* width: calc(var(--spacing) * 48); */
+    width: 150px;
   }
 
   .w-80 {
@@ -2995,31 +2996,31 @@
     border-color: var(--input);
   }
 
-  .dark\:bg-destructive\/60:is(.dark *) {
+  /* .dark\:bg-destructive\/60:is(.dark *) {
     background-color: var(--destructive);
-  }
+  } */
 
-  @supports (color: color-mix(in lab, red, red)) {
+  /* @supports (color: color-mix(in lab, red, red)) {
     .dark\:bg-destructive\/60:is(.dark *) {
       background-color: color-mix(in oklab, var(--destructive) 60%, transparent);
     }
-  }
+  } */
 
-  .dark\:bg-input\/30:is(.dark *) {
+  /* .dark\:bg-input\/30:is(.dark *) {
     background-color: var(--input);
-  }
+  } */
 
-  @supports (color: color-mix(in lab, red, red)) {
+  /* @supports (color: color-mix(in lab, red, red)) {
     .dark\:bg-input\/30:is(.dark *) {
       background-color: color-mix(in oklab, var(--input) 30%, transparent);
     }
-  }
+  } */
 
-  .dark\:text-muted-foreground:is(.dark *) {
+  /* .dark\:text-muted-foreground:is(.dark *) {
     color: var(--muted-foreground);
-  }
+  } */
 
-  @media (hover: hover) {
+  /* @media (hover: hover) {
     .dark\:hover\:bg-accent\/50:is(.dark *):hover {
       background-color: var(--accent);
     }
@@ -3029,9 +3030,9 @@
         background-color: color-mix(in oklab, var(--accent) 50%, transparent);
       }
     }
-  }
+  } */
 
-  @media (hover: hover) {
+  /* @media (hover: hover) {
     .dark\:hover\:bg-input\/50:is(.dark *):hover {
       background-color: var(--input);
     }
@@ -3083,7 +3084,7 @@
 
   .dark\:data-\[state\=checked\]\:bg-primary:is(.dark *)[data-state="checked"] {
     background-color: var(--primary);
-  }
+  } */
 
   .\[\&_svg\]\:pointer-events-none svg {
     pointer-events: none;
@@ -3225,7 +3226,7 @@
   --sidebar-ring: oklch(.708 0 0);
 }
 
-.dark {
+/* .dark {
   --background: oklch(.145 0 0);
   --foreground: oklch(.985 0 0);
   --card: oklch(.145 0 0);
@@ -3260,7 +3261,7 @@
   --sidebar-accent-foreground: oklch(.985 0 0);
   --sidebar-border: oklch(.269 0 0);
   --sidebar-ring: oklch(.439 0 0);
-}
+} */
 
 html {
   font-size: var(--font-size);

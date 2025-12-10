@@ -48,7 +48,7 @@ export function MobileNavigation() {
                 <button
                     onClick={() => setCurrentPage('home')}
                     className={`flex flex-col items-center justify-center py-3 px-1 ${currentPage === 'home'
-                        ? 'bg-white/40 backdrop-blur-sm rounded-t-3xl'
+                        ? 'bg-white/40 rounded-t-3xl'
                         : 'text-white hover:bg-white/20'
                         } transition-all duration-300 ease-out`}
                 >
@@ -60,7 +60,7 @@ export function MobileNavigation() {
                 <button
                     onClick={() => setCurrentPage('shop')}
                     className={`flex flex-col items-center justify-center py-3 px-1 ${currentPage === 'shop'
-                        ? 'bg-white/40 backdrop-blur-sm rounded-t-3xl'
+                        ? 'bg-white/40 rounded-t-3xl'
                         : 'text-white hover:bg-white/20'
                         } transition-all duration-300 ease-out`}
                 >
@@ -71,14 +71,14 @@ export function MobileNavigation() {
                 {/* Cart */}
                 <button
                     onClick={() => setCurrentPage('cart')}
-                    className={`flex flex-col items-center justify-center py-3 px-1 relative ${currentPage === 'cart'
-                        ? 'bg-white/40 backdrop-blur-sm rounded-t-3xl'
-                        : 'text-white hover:bg-white/20 hover:text-white'
+                    className={`flex flex-col items-center justify-center px-1 relative ${currentPage === 'cart'
+                        ? 'bg-white/40 rounded-t-3xl'
+                        : 'text-white hover:text-white'
                         } transition-all duration-300 ease-out`}
                 >
                     <ShoppingCart className="w-6 h-6 drop-shadow" />
                     {cartItemsCount > 0 && (
-                        <Badge className="absolute -top-2 -right-2 bg-green-500 text-white text-xs min-w-[1.2rem] h-5 flex items-center justify-center">
+                        <Badge className="absolute cart-counter bg-green-500 text-white text-xs min-w-[1.2rem] h-5 flex items-center justify-center">
                             {cartItemsCount}
                         </Badge>
                     )}
@@ -89,12 +89,12 @@ export function MobileNavigation() {
                 <button
                     onClick={() => user ? setCurrentPage('account') : setShowLoginModal(true)}
                     className={`flex flex-col items-center justify-center py-3 px-1 ${currentPage === 'account'
-                        ? 'bg-white/40 backdrop-blur-sm rounded-t-3xl'
-                        : 'text-white hover:bg-white/20'
+                        ? 'bg-white/40 rounded-t-3xl'
+                        : 'text-white'
                         } transition-all duration-300 ease-out`}
                 >
                     <User className="w-6 h-6 drop-shadow" />
-                    <span className="text-xs mt-1 font-semibold drop-shadow truncate px-1">{user ? user.name?.split(' ')[0] : t.account}</span>
+                    {/* <span className="text-xs mt-1 font-semibold drop-shadow truncate px-1">{user ? user.name?.split(' ')[0] : t.account}</span> */}
                 </button>
 
                 {/* Scroll to Top */}

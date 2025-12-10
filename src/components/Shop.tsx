@@ -290,7 +290,7 @@ export function Shop() {
 
           {/* Controls */}
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
               <span className="text-gray-600">
                 {t.showingResults.replace('{count}', sortedProducts.length.toString())}
               </span>
@@ -315,14 +315,14 @@ export function Shop() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center">
               {/* Refresh Button */}
               <Button
                 variant="outline"
                 size="sm"
                 onClick={fetchProducts}
                 disabled={loading}
-                className="flex items-center gap-2"
+                className="flex items-center"
               >
                 <svg
                   className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`}
@@ -337,7 +337,7 @@ export function Shop() {
                     d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
                   />
                 </svg>
-                {loading ? (language === 'en' ? 'Refreshing...' : 'جارٍ التحديث...') : (language === 'en' ? 'Refresh' : 'تحديث')}
+                {loading ? (language === 'en' ? 'Refres..' : 'جارٍ...') : (language === 'en' ? 'Refresh' : 'تحديث')}
               </Button>
 
               {/* Mobile Filter Sheet */}
@@ -345,7 +345,7 @@ export function Shop() {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="flex items-center gap-2"
+                  className="flex items-center"
                   onClick={() => setShowMobileFilters(!showMobileFilters)}
                 >
                   <Filter className="w-4 h-4" />

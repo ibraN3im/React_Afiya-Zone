@@ -150,7 +150,6 @@ export function NotificationBell({ onNotificationClick }: NotificationBellProps)
         <Bell size={20} className={loading ? 'animate__animated animate__pulse' : ''} />
         {loading && (
           <span className="position-relative p-1 bg-primary border border-light rounded-circle">
-            <span className="visually-hidden">Loading...</span>
           </span>
         )}
         {unreadCount > 0 && (
