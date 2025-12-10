@@ -69,7 +69,7 @@
     --transition-slow: 500ms ease-in-out;
 }
 
-/* .dark {
+.dark {
     --background: oklch(0.145 0 0);
     --foreground: oklch(0.985 0 0);
     --card: oklch(0.145 0 0);
@@ -105,14 +105,14 @@
     --sidebar-border: oklch(0.269 0 0);
     --sidebar-ring: oklch(0.439 0 0);
 
-    Dark mode overrides for enhanced variables
+    /* Dark mode overrides for enhanced variables */
     --text-dark: #f9fafb;
     --text-light: #d1d5db;
     --text-lighter: #9ca3af;
     --border-color: #374151;
     --warm-gray: #1f2937;
     --cool-gray: #374151;
-} */
+}
 
 @theme inline {
     --color-background: var(--background);
@@ -1915,9 +1915,9 @@ label {
     color: var(--color-green-600);
 }
 
-/* .cart-cart {
+.cart-cart {
     background-color: azure;
-} */
+}
 
 .shopping-cart {
     gap: 10px;

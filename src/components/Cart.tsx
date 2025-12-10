@@ -122,7 +122,7 @@ export function Cart() {
           <h6 className="text-3xl text-green-600">{t.cart}</h6>
         </div>
 
-        <div>
+        <div className="grid lg:grid-cols-3 gap-8">
           {/* Cart Items */}
           <div className="lg:col-span-2 space-y-4">
             {cart.map((item) => (
