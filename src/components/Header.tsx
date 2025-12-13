@@ -63,7 +63,7 @@ export function Header() {
             onClick={() => setCurrentPage('home')}
           >
             <img
-              src="/src/logo/afiya-logo.jpg"
+              src="src/logo/afiya-logo.jpg"
               alt="Afiya Zone Logo"
               className="w-10 h-10 rounded-full mr-3 object-contain logo "
             />
