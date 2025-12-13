@@ -35,10 +35,10 @@ function App() {
       <div className="min-vh-100 bg-light d-flex align-items-center justify-content-center">
         <div className="text-center">
           <div className="mb-3">
-            <img 
-              src="/src/logo/afiya-logo.jpg" 
-              alt="Afiya Zone Logo" 
-              className="img-fluid" 
+            <img
+              src="/assets/icon.png"
+              alt="Afiya Zone Logo"
+              className="img-fluid"
               style={{ maxHeight: '60px' }}
             />
           </div>

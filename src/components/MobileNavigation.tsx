@@ -99,6 +99,8 @@ export function MobileNavigation() {
 
                 {/* Scroll to Top */}
                 <button
+                    type="button"
+                    aria-label="Scroll to top"
                     onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     className="flex flex-col items-center justify-center py-3 px-1 text-white hover:bg-white/20 transition-all duration-300 ease-out"
                 >

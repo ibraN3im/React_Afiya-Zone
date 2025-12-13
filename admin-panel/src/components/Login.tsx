@@ -44,7 +44,7 @@ export default function Login({ onLogin }: LoginProps) {
           <div className="admin-logo-cart text-center mb-4">
 
             <img
-              src="/src/logo/afiya-logo.jpg"
+              src="/assets/icon.png"
               alt="Afiya Zone Logo"
               className="img-fluid admin-logo"
             />
@@ -102,7 +102,7 @@ export default function Login({ onLogin }: LoginProps) {
           <div className="admin-logo-cart text-center mb-4">
 
             <img
-              src="/src/logo/afiya-logo.jpg"
+              src="/assets/icon.png"
               alt="Afiya Zone Logo"
               className="img-fluid admin-logo"
             />

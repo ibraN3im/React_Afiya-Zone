@@ -119,7 +119,7 @@ export function Cart() {
             <ArrowLeft className="w-4 h-4 mr-2" />
             {t.backToShop}
           </Button>
-          <h6 className="text-3xl text-green-600">{t.cart}</h6>
+          <h6 className="shopping-title text-green-600">{t.cart}</h6>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">

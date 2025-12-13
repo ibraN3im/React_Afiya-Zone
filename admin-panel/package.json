@@ -3,11 +3,17 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Standalone Admin Panel for Afiya Zone",
-  "main": "index.js",
+  "main": "electron/main.js",
   "scripts": {
+    "predev": "npm run generate:icons",
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate:icons": "node scripts/generate-icons.js",
+    "electron:dev": "concurrently \"npm:dev\" \"wait-on http://localhost:5173 && electron .\"",
+    "electron:build": "npm run generate:icons && npm run build && electron-builder --windows portable",
+    "electron:pack": "npm run generate:icons && npm run build && electron-packager . \"Afiya Zone Admin Panel\" --platform=win32 --arch=x64 --out=dist_electron/pack --overwrite --icon=assets/icon.ico --prune=true --asar=false",
+    "package": "npm run electron:build"
   },
   "keywords": [],
   "author": "",
@@ -25,5 +31,34 @@
     "sonner": "^2.0.7",
     "typescript": "^5.9.3",
     "vite": "^7.2.4"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "electron": "^26.0.0",
+    "electron-builder": "^24.0.0",
+    "electron-packager": "^17.1.2",
+    "jimp": "^0.22.11",
+    "png-to-ico": "^1.0.0",
+    "wait-on": "^7.0.1"
+  },
+  "build": {
+    "icon": "assets/icon",
+    "productName": "Afiya Zone Admin Panel",
+    "appId": "com.afiyazone.adminpanel",
+    "asar": false,
+    "directories": {
+      "output": "dist_electron",
+      "buildResources": "assets"
+    },
+    "files": [
+      "dist/**",
+      "electron/**",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "portable"
+      ]
+    }
   }
 }

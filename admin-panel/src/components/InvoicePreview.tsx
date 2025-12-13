@@ -37,7 +37,7 @@ export function InvoicePreview({ order, onClose, onDownload }: InvoicePreviewPro
             {/* Invoice Header */}
             <div className="text-center">
               <div className="inv-logo gap-2">
-                <div><img src="/src/logo/afiya-logo.jpg" alt="Afiya Zone Logo" /></div>
+                <div><img src="/assets/icon.png" alt="Afiya Zone Logo" /></div>
                 <h4>AFIYA ZONE</h4>
               </div>
 

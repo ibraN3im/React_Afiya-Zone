@@ -28,7 +28,7 @@ export function PrintableInvoice({ order, onClose }: PrintableInvoiceProps) {
     const timer = setTimeout(() => {
       handlePrint();
     }, 500);
-    
+
     return () => clearTimeout(timer);
   }, []);
 
@@ -56,10 +56,10 @@ export function PrintableInvoice({ order, onClose }: PrintableInvoiceProps) {
         {/* Invoice Header */}
         <div className="text-center mb-5">
           <div className="mb-3">
-            <img 
-              src="/src/logo/afiya-logo.jpg" 
-              alt="Afiya Zone Logo" 
-              className="img-fluid" 
+            <img
+              src="/assets/icon.png"
+              alt="Afiya Zone Logo"
+              className="img-fluid"
               style={{ maxHeight: '80px' }}
             />
           </div>
@@ -67,7 +67,7 @@ export function PrintableInvoice({ order, onClose }: PrintableInvoiceProps) {
           <p className="text-muted">Natural Health & Wellness</p>
           <hr className="my-4" />
         </div>
-        
+
         {/* Order Info */}
         <div className="row mb-5">
           <div className="col-md-6 mb-3">
@@ -81,14 +81,14 @@ export function PrintableInvoice({ order, onClose }: PrintableInvoiceProps) {
               </span>
             </p>
           </div>
-          
+
           <div className="col-md-6 mb-3">
             <h3 className="h5 fw-medium mb-3">Customer</h3>
             <p className="mb-1">{order.user?.firstName} {order.user?.lastName}</p>
             <p className="mb-0">{order.user?.email}</p>
           </div>
         </div>
-        
+
         {/* Shipping Address */}
         <div className="mb-5">
           <h3 className="h5 fw-medium mb-3">Shipping Address</h3>
@@ -100,7 +100,7 @@ export function PrintableInvoice({ order, onClose }: PrintableInvoiceProps) {
             <p className="mb-0">Phone: {order.shippingAddress.phone}</p>
           </div>
         </div>
-        
+
         {/* Items */}
         <div className="mb-5">
           <h3 className="h5 fw-medium mb-3">Order Items</h3>
@@ -129,7 +129,7 @@ export function PrintableInvoice({ order, onClose }: PrintableInvoiceProps) {
             </table>
           </div>
         </div>
-        
+
         {/* Summary */}
         <div className="mb-5">
           <div className="border-top pt-3">
@@ -153,13 +153,13 @@ export function PrintableInvoice({ order, onClose }: PrintableInvoiceProps) {
             </div>
           </div>
         </div>
-        
+
         {/* Payment Info */}
         <div className="mb-5">
           <h3 className="h5 fw-medium mb-3">Payment Method</h3>
           <p className="mb-0">{order.paymentMethod}</p>
         </div>
-        
+
         {/* Footer */}
         <div className="text-center text-muted border-top pt-4">
           <p className="mb-1">Thank you for your business!</p>

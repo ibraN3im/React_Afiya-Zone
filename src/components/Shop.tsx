@@ -88,7 +88,8 @@ export function Shop() {
 
   // Filter states
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [priceRange, setPriceRange] = useState([0, 100]);
+  const [priceRange, setPriceRange] = useState([0, 1000]);
+  const [sliderMax, setSliderMax] = useState(1000);
   const [sortBy, setSortBy] = useState('popular');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>(() => {
@@ -119,12 +120,23 @@ export function Shop() {
       }
 
       if (priceRange[0] > 0) filters.minPrice = priceRange[0];
-      if (priceRange[1] < 100) filters.maxPrice = priceRange[1];
+      if (priceRange[1] < sliderMax) filters.maxPrice = priceRange[1];
       if (searchQuery) filters.search = searchQuery;
       if (sortBy) filters.sortBy = sortBy;
 
       const data = await productsAPI.getAll(filters);
-      setProducts(Array.isArray(data) ? data : (data.products || []));
+      const productsArray = Array.isArray(data) ? data : (data.products || []);
+
+      // Compute slider max from products and adjust slider if needed
+      const maxInData = productsArray.length ? Math.max(...productsArray.map((p: any) => p.price || 0)) : sliderMax;
+      const newMax = Math.max(100, Math.ceil(maxInData / 10) * 10);
+      if (newMax !== sliderMax) {
+        setSliderMax(newMax);
+        // Only update priceRange max if user hasn't moved the slider (still at previous sliderMax)
+        setPriceRange(prev => prev[1] === sliderMax ? [prev[0], newMax] : prev);
+      }
+
+      setProducts(productsArray);
     } catch (err: any) {
       setError(err.message || t.error);
       console.error('Error fetching products:', err);
@@ -236,7 +248,7 @@ export function Shop() {
 
   const clearFilters = () => {
     setSelectedCategories([]);
-    setPriceRange([0, 100]);
+    setPriceRange([0, sliderMax]);
     setSearchQuery('');
   };
 
@@ -255,7 +267,7 @@ export function Shop() {
   if (error && products.length === 0) {
     return (
       <div className="min-h-screen py-8">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="text-center py-12">
             <p className="text-red-500 mb-4">{error}</p>
             <Button
@@ -272,10 +284,10 @@ export function Shop() {
 
   return (
     <div className="min-h-screen">
-      <div className="container mx-auto px-4 ">
+      <div className="container mx-auto">
         {/* Header */}
-        <div className="mb-4">
-          <h3 className="shop-title">{t.shop}</h3>
+        <div className="mb-4 p-4">
+          <h3 className="shop-title text-green-600">{t.shop}</h3>
 
           {/* Search Bar */}
           <div className="relative max-w-md mb-6">
@@ -291,7 +303,7 @@ export function Shop() {
           {/* Controls */}
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
             <div className="flex items-center gap-2">
-              <span className="text-gray-600">
+              <span className="text-gray-600 f-size-14">
                 {t.showingResults.replace('{count}', sortedProducts.length.toString())}
               </span>
 
@@ -315,7 +327,7 @@ export function Shop() {
               </div>
             </div>
 
-            <div className="flex items-center">
+            <div className="flex items-center gap-2">
               {/* Refresh Button */}
               <Button
                 variant="outline"
@@ -392,7 +404,7 @@ export function Shop() {
                             onValueChange={(value: number[]) => {
                               setPriceRange(value);
                             }}
-                            max={100}
+                            max={sliderMax}
                             step={5}
                             className="mb-2"
                           />
@@ -416,23 +428,24 @@ export function Shop() {
                 )}
               </div>
 
-              <Select value={sortBy} onValueChange={setSortBy} >
-                <SelectTrigger className="w-40">
+              <Select value={sortBy} onValueChange={setSortBy}>
+                <SelectTrigger className=" select-value focus:border-green-400">
                   <SelectValue placeholder={t.sortBy} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="popular">{t.popular}</SelectItem>
-                  <SelectItem value="priceLowHigh">{t.priceLowHigh}</SelectItem>
-                  <SelectItem value="priceHighLow">{t.priceHighLow}</SelectItem>
-                  <SelectItem value="newest">{t.newest}</SelectItem>
-                  <SelectItem value="rating">{t.sortByRating}</SelectItem>
+                  <SelectItem value="popular" className='f-size-11'>{t.popular}</SelectItem>
+                  <SelectItem value="priceLowHigh" className='f-size-11'>{t.priceLowHigh}</SelectItem>
+                  <SelectItem value="priceHighLow" className='f-size-11'>{t.priceHighLow}</SelectItem>
+                  <SelectItem value="newest" className='f-size-11'>{t.newest}</SelectItem>
+                  <SelectItem value="rating" className='f-size-11'>{t.sortByRating}</SelectItem>
                 </SelectContent>
               </Select>
+
             </div>
           </div>
         </div>
 
-        <div className="p-1">
+        <div className="p-0">
           {/* Filters Sidebar - Only shown on desktop */}
           {isMobile === false && (
             <div className="lg:col-span-1">

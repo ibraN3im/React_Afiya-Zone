@@ -342,7 +342,7 @@ export default function Dashboard({ onLogout, adminUser }: DashboardProps) {
                 <div className="logo-admin-panel">
                   <div className="d-flex align-items-center gap-2 cursor-pointer">
                     <img
-                      src="/src/logo/afiya-logo.jpg"
+                      src="/assets/icon.png"
                       alt="Afiya Zone Logo"
                     />
                     <h1 className="h3 fw-bold mb-1 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Afiya Zone Admin Panel</h1>
