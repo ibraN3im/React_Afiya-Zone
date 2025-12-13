@@ -7,38 +7,38 @@ db.products.insertOne({
     "ar": "جهاز قياس ضغط الدم الرقمي"
   },
   "description": {
-    "en": "Innovative medical device with cutting-edge technology",
-    "ar": "جهاز طبي مبتكر بتقنية متطورة"
+    "en": "Durable medical equipment built for longevity and performance",
+    "ar": "معدات طبية متينة مبنية على المتانة والأداء"
   },
   "category": "medical",
-  "price": 383.89,
-  "originalPrice": 461.53,
-  "stock": 107,
+  "price": 184.78,
+  "originalPrice": 223.56,
+  "stock": 197,
   "images": [
-    "https://images.unsplash.com/photo-1584456319363-d6a9ca8d25c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0Nnw&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "https://images.unsplash.com/photo-1586982919593-70f5fd07bd58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGV0aG9zY29wZXxlbnwwfHx8fDE3NTkwNzY4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1622059342013-b00f0dc009c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzU5MDc2ODUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1586498847547-1c1e45b809d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwbW9uaXRvcnxlbnwwfHx8fDE3NTkwNzY4NTB8MA&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
-      "en": "Auto shut-off",
+      "en": "Durable construction",
       "ar": "تعمل بالبطارية"
     },
     {
-      "en": "High precision measurement",
-      "ar": "واجهة سهلة الاستخدام"
+      "en": "Digital display",
+      "ar": "قياس عالي الدقة"
     },
     {
       "en": "Lightweight design",
-      "ar": "حجم محمول"
+      "ar": "واجهة سهلة الاستخدام"
     },
     {
       "en": "Portable size",
-      "ar": "قياس عالي الدقة"
+      "ar": "تصميم خفيف الوزن"
     }
   ],
-  "rating": 4.7,
-  "isNew": true,
+  "rating": 4,
+  "isNew": false,
   "isFeatured": false,
   "isPopular": false
 });
@@ -49,38 +49,38 @@ db.products.insertOne({
     "ar": "جهاز قياس نبض الأكسجين"
   },
   "description": {
-    "en": "State-of-the-art medical technology for improved patient outcomes",
-    "ar": "أحدث تقنيات الأجهزة الطبية لتحسين نتائج المرضى"
+    "en": "Reliable medical apparatus for continuous health monitoring",
+    "ar": "معدات طبية موثوقة للإشراف الصحي المستمر"
   },
   "category": "medical",
-  "price": 256.81,
-  "originalPrice": 317.45,
-  "stock": 78,
+  "price": 456.21,
+  "originalPrice": 547.42,
+  "stock": 112,
   "images": [
-    "https://images.unsplash.com/photo-1586982919593-70f5fd07bd58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGV0aG9zY29wZXxlbnwwfHx8fDE3NTkwNzY4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1622059342013-b00f0dc009c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzU5MDc2ODUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1584456319363-d6a9ca8d25c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0Nnw&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080",
     "https://images.unsplash.com/photo-1586498847547-1c1e45b809d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwbW9uaXRvcnxlbnwwfHx8fDE3NTkwNzY4NTB8MA&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
-      "en": "Alarm function",
-      "ar": "تخزين الذاكرة"
-    },
-    {
-      "en": "Easy to use interface",
-      "ar": "قياس عالي الدقة"
-    },
-    {
-      "en": "Portable size",
+      "en": "Digital display",
       "ar": "تصميم خفيف الوزن"
     },
     {
-      "en": "High precision measurement",
+      "en": "Alarm function",
+      "ar": "قياس عالي الدقة"
+    },
+    {
+      "en": "Lightweight design",
       "ar": "واجهة سهلة الاستخدام"
+    },
+    {
+      "en": "Auto shut-off",
+      "ar": "حجم محمول"
     }
   ],
-  "rating": 4.8,
-  "isNew": false,
+  "rating": 3.6,
+  "isNew": true,
   "isFeatured": false,
   "isPopular": false
 });
@@ -91,40 +91,40 @@ db.products.insertOne({
     "ar": "ميزان حرارة رقمي"
   },
   "description": {
-    "en": "Clinical grade medical instrument for precise measurements",
-    "ar": "أجهزة طبية من الفئة السريرية لقياسات دقيقة"
+    "en": "Durable medical equipment built for longevity and performance",
+    "ar": "معدات طبية متينة مبنية على المتانة والأداء"
   },
   "category": "medical",
-  "price": 360.76,
-  "originalPrice": 416.92,
-  "stock": 25,
+  "price": 270.66,
+  "originalPrice": 367.32,
+  "stock": 198,
   "images": [
-    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1584456319363-d6a9ca8d25c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0Nnw&ixlib=rb-4.1.0&q=80&w=1080",
     "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1584456319363-d6a9ca8d25c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0Nnw&ixlib=rb-4.1.0&q=80&w=1080"
+    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
-      "en": "Alarm function",
-      "ar": "قياس عالي الدقة"
-    },
-    {
-      "en": "Auto shut-off",
-      "ar": "واجهة سهلة الاستخدام"
-    },
-    {
       "en": "Lightweight design",
-      "ar": "حجم محمول"
+      "ar": "شاشة رقمية"
     },
     {
       "en": "Memory storage",
-      "ar": "تعمل بالبطارية"
+      "ar": "قياس عالي الدقة"
+    },
+    {
+      "en": "Digital display",
+      "ar": "واجهة سهلة الاستخدام"
+    },
+    {
+      "en": "Portable size",
+      "ar": "وظيفة الإنذار"
     }
   ],
-  "rating": 4.8,
+  "rating": 4.5,
   "isNew": false,
   "isFeatured": false,
-  "isPopular": true
+  "isPopular": false
 });
 
 db.products.insertOne({
@@ -133,39 +133,39 @@ db.products.insertOne({
     "ar": "جهاز تبخير"
   },
   "description": {
-    "en": "Reliable medical apparatus for continuous health monitoring",
-    "ar": "معدات طبية موثوقة للإشراف الصحي المستمر"
+    "en": "Essential medical tool for healthcare facilities and home use",
+    "ar": "أداة طبية أساسية لمرافق الرعاية الصحية والاستخدام المنزلي"
   },
   "category": "medical",
-  "price": 40.97,
-  "originalPrice": 53.48,
-  "stock": 164,
+  "price": 179.24,
+  "originalPrice": 236.57,
+  "stock": 31,
   "images": [
-    "https://images.unsplash.com/photo-1622059342013-b00f0dc009c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzU5MDc2ODUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1586982919593-70f5fd07bd58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGV0aG9zY29wZXxlbnwwfHx8fDE3NTkwNzY4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1584456319363-d6a9ca8d25c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0Nnw&ixlib=rb-4.1.0&q=80&w=1080",
     "https://images.unsplash.com/photo-1586498847547-1c1e45b809d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwbW9uaXRvcnxlbnwwfHx8fDE3NTkwNzY4NTB8MA&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
-      "en": "Auto shut-off",
+      "en": "Portable size",
+      "ar": "قياس عالي الدقة"
+    },
+    {
+      "en": "Alarm function",
+      "ar": "حجم محمول"
+    },
+    {
+      "en": "Digital display",
       "ar": "واجهة سهلة الاستخدام"
     },
     {
-      "en": "High precision measurement",
-      "ar": "إيقاف تلقائي"
-    },
-    {
-      "en": "Battery operated",
-      "ar": "تعمل بالبطارية"
-    },
-    {
-      "en": "Easy to use interface",
-      "ar": "تصميم خفيف الوزن"
+      "en": "Durable construction",
+      "ar": "تخزين الذاكرة"
     }
   ],
   "rating": 3.8,
-  "isNew": false,
-  "isFeatured": true,
+  "isNew": true,
+  "isFeatured": false,
   "isPopular": true
 });
 
@@ -175,39 +175,39 @@ db.products.insertOne({
     "ar": "جهاز قياس السكر في الدم"
   },
   "description": {
-    "en": "Professional medical device for accurate monitoring and diagnosis",
-    "ar": "جهاز طبي احترافي لمراقبة وتشخيص دقيقة"
+    "en": "Precision engineered medical equipment for healthcare professionals",
+    "ar": "معدات طبية مصممة بدقة هندسية لمحترفي الرعاية الصحية"
   },
   "category": "medical",
-  "price": 399.03,
-  "originalPrice": 539.36,
-  "stock": 125,
+  "price": 384.86,
+  "originalPrice": 485.29,
+  "stock": 70,
   "images": [
-    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1586498847547-1c1e45b809d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwbW9uaXRvcnxlbnwwfHx8fDE3NTkwNzY4NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1622059342013-b00f0dc009c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzU5MDc2ODUxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "https://images.unsplash.com/photo-1586982919593-70f5fd07bd58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGV0aG9zY29wZXxlbnwwfHx8fDE3NTkwNzY4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1622059342013-b00f0dc009c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzU5MDc2ODUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
-      "en": "High precision measurement",
-      "ar": "قياس عالي الدقة"
+      "en": "Lightweight design",
+      "ar": "تخزين الذاكرة"
     },
     {
-      "en": "Portable size",
-      "ar": "تعمل بالبطارية"
-    },
-    {
-      "en": "Easy to use interface",
+      "en": "Battery operated",
       "ar": "شاشة رقمية"
     },
     {
-      "en": "Lightweight design",
+      "en": "Alarm function",
+      "ar": "إيقاف تلقائي"
+    },
+    {
+      "en": "Durable construction",
       "ar": "وظيفة الإنذار"
     }
   ],
-  "rating": 4.5,
+  "rating": 3.6,
   "isNew": true,
-  "isFeatured": true,
+  "isFeatured": false,
   "isPopular": false
 });
 
@@ -217,40 +217,40 @@ db.products.insertOne({
     "ar": "ميزان وزن رقمي"
   },
   "description": {
-    "en": "Innovative medical device with cutting-edge technology",
-    "ar": "جهاز طبي مبتكر بتقنية متطورة"
+    "en": "Precision engineered medical equipment for healthcare professionals",
+    "ar": "معدات طبية مصممة بدقة هندسية لمحترفي الرعاية الصحية"
   },
   "category": "medical",
-  "price": 304.91,
-  "originalPrice": 358.74,
-  "stock": 95,
+  "price": 269.81,
+  "originalPrice": 385.55,
+  "stock": 47,
   "images": [
+    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1584456319363-d6a9ca8d25c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0Nnw&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "https://images.unsplash.com/photo-1586498847547-1c1e45b809d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwbW9uaXRvcnxlbnwwfHx8fDE3NTkwNzY4NTB8MA&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
-      "en": "Durable construction",
+      "en": "Battery operated",
       "ar": "تخزين الذاكرة"
     },
     {
       "en": "Memory storage",
+      "ar": "إيقاف تلقائي"
+    },
+    {
+      "en": "High precision measurement",
+      "ar": "تصميم خفيف الوزن"
+    },
+    {
+      "en": "Lightweight design",
       "ar": "تعمل بالبطارية"
-    },
-    {
-      "en": "Alarm function",
-      "ar": "حجم محمول"
-    },
-    {
-      "en": "Battery operated",
-      "ar": "بناء متين"
     }
   ],
-  "rating": 4.8,
+  "rating": 5,
   "isNew": false,
   "isFeatured": false,
-  "isPopular": true
+  "isPopular": false
 });
 
 db.products.insertOne({
@@ -259,13 +259,13 @@ db.products.insertOne({
     "ar": "ميزان حرارة بالأشعة تحت الحمراء"
   },
   "description": {
-    "en": "Clinical grade medical instrument for precise measurements",
-    "ar": "أجهزة طبية من الفئة السريرية لقياسات دقيقة"
+    "en": "Advanced healthcare equipment for home medical care",
+    "ar": "معدات رعاية صحية متقدمة للعناية الطبية المنزلية"
   },
   "category": "medical",
-  "price": 307.47,
-  "originalPrice": 449.45,
-  "stock": 154,
+  "price": 337.87,
+  "originalPrice": 465.87,
+  "stock": 178,
   "images": [
     "https://images.unsplash.com/photo-1584456319363-d6a9ca8d25c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0Nnw&ixlib=rb-4.1.0&q=80&w=1080",
     "https://images.unsplash.com/photo-1586982919593-70f5fd07bd58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGV0aG9zY29wZXxlbnwwfHx8fDE3NTkwNzY4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -273,26 +273,26 @@ db.products.insertOne({
   ],
   "features": [
     {
-      "en": "Easy to use interface",
+      "en": "Lightweight design",
       "ar": "شاشة رقمية"
     },
     {
-      "en": "Durable construction",
-      "ar": "تصميم خفيف الوزن"
+      "en": "Battery operated",
+      "ar": "واجهة سهلة الاستخدام"
     },
     {
-      "en": "Auto shut-off",
-      "ar": "تعمل بالبطارية"
+      "en": "Portable size",
+      "ar": "تخزين الذاكرة"
     },
     {
-      "en": "Alarm function",
-      "ar": "إيقاف تلقائي"
+      "en": "Memory storage",
+      "ar": "بناء متين"
     }
   ],
-  "rating": 3.5,
+  "rating": 4.6,
   "isNew": false,
   "isFeatured": true,
-  "isPopular": true
+  "isPopular": false
 });
 
 db.products.insertOne({
@@ -301,40 +301,40 @@ db.products.insertOne({
     "ar": "جهاز العلاج بالضغط"
   },
   "description": {
-    "en": "State-of-the-art medical technology for improved patient outcomes",
-    "ar": "أحدث تقنيات الأجهزة الطبية لتحسين نتائج المرضى"
+    "en": "Essential medical tool for healthcare facilities and home use",
+    "ar": "أداة طبية أساسية لمرافق الرعاية الصحية والاستخدام المنزلي"
   },
   "category": "medical",
-  "price": 224.46,
-  "originalPrice": 316.98,
-  "stock": 148,
+  "price": 386.82,
+  "originalPrice": 552.57,
+  "stock": 72,
   "images": [
     "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080",
     "https://images.unsplash.com/photo-1584456319363-d6a9ca8d25c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0Nnw&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1622059342013-b00f0dc009c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzU5MDc2ODUxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "https://images.unsplash.com/photo-1586498847547-1c1e45b809d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwbW9uaXRvcnxlbnwwfHx8fDE3NTkwNzY4NTB8MA&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
-      "en": "Alarm function",
-      "ar": "حجم محمول"
-    },
-    {
-      "en": "Portable size",
-      "ar": "قياس عالي الدقة"
-    },
-    {
-      "en": "Durable construction",
+      "en": "Digital display",
       "ar": "شاشة رقمية"
     },
     {
-      "en": "Easy to use interface",
-      "ar": "واجهة سهلة الاستخدام"
+      "en": "Lightweight design",
+      "ar": "تصميم خفيف الوزن"
+    },
+    {
+      "en": "Durable construction",
+      "ar": "تعمل بالبطارية"
+    },
+    {
+      "en": "Portable size",
+      "ar": "تخزين الذاكرة"
     }
   ],
-  "rating": 4.1,
+  "rating": 4.8,
   "isNew": true,
   "isFeatured": false,
-  "isPopular": false
+  "isPopular": true
 });
 
 db.products.insertOne({
@@ -343,37 +343,37 @@ db.products.insertOne({
     "ar": "مساج كهربائي"
   },
   "description": {
-    "en": "Professional medical device for accurate monitoring and diagnosis",
-    "ar": "جهاز طبي احترافي لمراقبة وتشخيص دقيقة"
+    "en": "Clinical grade medical instrument for precise measurements",
+    "ar": "أجهزة طبية من الفئة السريرية لقياسات دقيقة"
   },
   "category": "medical",
-  "price": 120.16,
-  "originalPrice": 134.34,
-  "stock": 184,
+  "price": 119.02,
+  "originalPrice": 136.54,
+  "stock": 68,
   "images": [
-    "https://images.unsplash.com/photo-1584456319363-d6a9ca8d25c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0Nnw&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1586982919593-70f5fd07bd58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGV0aG9zY29wZXxlbnwwfHx8fDE3NTkwNzY4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1622059342013-b00f0dc009c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzU5MDc2ODUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
       "en": "Portable size",
-      "ar": "قياس عالي الدقة"
+      "ar": "تخزين الذاكرة"
     },
     {
       "en": "High precision measurement",
-      "ar": "شاشة رقمية"
+      "ar": "تعمل بالبطارية"
     },
     {
-      "en": "Easy to use interface",
-      "ar": "واجهة سهلة الاستخدام"
+      "en": "Lightweight design",
+      "ar": "إيقاف تلقائي"
     },
     {
-      "en": "Durable construction",
-      "ar": "وظيفة الإنذار"
+      "en": "Battery operated",
+      "ar": "تصميم خفيف الوزن"
     }
   ],
-  "rating": 4.9,
+  "rating": 4.1,
   "isNew": false,
   "isFeatured": false,
   "isPopular": false
@@ -385,38 +385,38 @@ db.products.insertOne({
     "ar": "مجموعة أقنعة التبخير الطبية"
   },
   "description": {
-    "en": "Clinical grade medical instrument for precise measurements",
-    "ar": "أجهزة طبية من الفئة السريرية لقياسات دقيقة"
+    "en": "Professional medical device for accurate monitoring and diagnosis",
+    "ar": "جهاز طبي احترافي لمراقبة وتشخيص دقيقة"
   },
   "category": "medical",
-  "price": 219.47,
-  "originalPrice": 259.56,
-  "stock": 143,
+  "price": 353.39,
+  "originalPrice": 440.35,
+  "stock": 93,
   "images": [
     "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1586982919593-70f5fd07bd58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGV0aG9zY29wZXxlbnwwfHx8fDE3NTkwNzY4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "https://images.unsplash.com/photo-1584456319363-d6a9ca8d25c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0Nnw&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1622059342013-b00f0dc009c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzU5MDc2ODUxfDA&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
-      "en": "Easy to use interface",
-      "ar": "واجهة سهلة الاستخدام"
+      "en": "Battery operated",
+      "ar": "تصميم خفيف الوزن"
+    },
+    {
+      "en": "Portable size",
+      "ar": "تخزين الذاكرة"
     },
     {
       "en": "Alarm function",
-      "ar": "قياس عالي الدقة"
-    },
-    {
-      "en": "High precision measurement",
-      "ar": "حجم محمول"
+      "ar": "تعمل بالبطارية"
     },
     {
       "en": "Durable construction",
-      "ar": "إيقاف تلقائي"
+      "ar": "بناء متين"
     }
   ],
-  "rating": 4.9,
-  "isNew": false,
+  "rating": 3.9,
+  "isNew": true,
   "isFeatured": false,
   "isPopular": false
 });
@@ -431,36 +431,36 @@ db.products.insertOne({
     "ar": "جهاز طبي احترافي لمراقبة وتشخيص دقيقة"
   },
   "category": "medical",
-  "price": 23.96,
-  "originalPrice": 35.88,
-  "stock": 109,
+  "price": 274.34,
+  "originalPrice": 316.54,
+  "stock": 144,
   "images": [
-    "https://images.unsplash.com/photo-1586498847547-1c1e45b809d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwbW9uaXRvcnxlbnwwfHx8fDE3NTkwNzY4NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "https://images.unsplash.com/photo-1584456319363-d6a9ca8d25c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0Nnw&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1622059342013-b00f0dc009c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzU5MDc2ODUxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "https://images.unsplash.com/photo-1586498847547-1c1e45b809d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwbW9uaXRvcnxlbnwwfHx8fDE3NTkwNzY4NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1586982919593-70f5fd07bd58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGV0aG9zY29wZXxlbnwwfHx8fDE3NTkwNzY4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
-      "en": "Portable size",
+      "en": "Easy to use interface",
       "ar": "قياس عالي الدقة"
     },
     {
-      "en": "Durable construction",
+      "en": "Auto shut-off",
       "ar": "تصميم خفيف الوزن"
     },
     {
-      "en": "Battery operated",
-      "ar": "إيقاف تلقائي"
+      "en": "Portable size",
+      "ar": "واجهة سهلة الاستخدام"
     },
     {
-      "en": "Auto shut-off",
-      "ar": "شاشة رقمية"
+      "en": "High precision measurement",
+      "ar": "بناء متين"
     }
   ],
-  "rating": 5,
+  "rating": 4.1,
   "isNew": false,
   "isFeatured": false,
-  "isPopular": true
+  "isPopular": false
 });
 
 db.products.insertOne({
@@ -469,39 +469,39 @@ db.products.insertOne({
     "ar": "سماعة طبية احترافية"
   },
   "description": {
-    "en": "Clinical grade medical instrument for precise measurements",
-    "ar": "أجهزة طبية من الفئة السريرية لقياسات دقيقة"
+    "en": "Professional medical device for accurate monitoring and diagnosis",
+    "ar": "جهاز طبي احترافي لمراقبة وتشخيص دقيقة"
   },
   "category": "medical",
-  "price": 322.92,
-  "originalPrice": 437.3,
-  "stock": 10,
+  "price": 229.7,
+  "originalPrice": 269.07,
+  "stock": 106,
   "images": [
-    "https://images.unsplash.com/photo-1584456319363-d6a9ca8d25c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0Nnw&ixlib=rb-4.1.0&q=80&w=1080",
     "https://images.unsplash.com/photo-1586498847547-1c1e45b809d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwbW9uaXRvcnxlbnwwfHx8fDE3NTkwNzY4NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1622059342013-b00f0dc009c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzU5MDc2ODUxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
-      "en": "Auto shut-off",
-      "ar": "بناء متين"
-    },
-    {
-      "en": "Portable size",
-      "ar": "واجهة سهلة الاستخدام"
+      "en": "Durable construction",
+      "ar": "تخزين الذاكرة"
     },
     {
       "en": "Alarm function",
-      "ar": "شاشة رقمية"
+      "ar": "إيقاف تلقائي"
     },
     {
       "en": "Memory storage",
-      "ar": "حجم محمول"
+      "ar": "واجهة سهلة الاستخدام"
+    },
+    {
+      "en": "Easy to use interface",
+      "ar": "قياس عالي الدقة"
     }
   ],
-  "rating": 4.4,
+  "rating": 3.5,
   "isNew": false,
-  "isFeatured": false,
+  "isFeatured": true,
   "isPopular": true
 });
 
@@ -515,36 +515,36 @@ db.products.insertOne({
     "ar": "معدات طبية عالية الجودة مصممة للعناية بالمرضى"
   },
   "category": "medical",
-  "price": 345.79,
-  "originalPrice": 427.22,
-  "stock": 54,
+  "price": 274.08,
+  "originalPrice": 324.93,
+  "stock": 174,
   "images": [
-    "https://images.unsplash.com/photo-1584456319363-d6a9ca8d25c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0Nnw&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1586982919593-70f5fd07bd58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGV0aG9zY29wZXxlbnwwfHx8fDE3NTkwNzY4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1622059342013-b00f0dc009c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzU5MDc2ODUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
-      "en": "Memory storage",
-      "ar": "تعمل بالبطارية"
+      "en": "Alarm function",
+      "ar": "قياس عالي الدقة"
     },
     {
       "en": "Battery operated",
-      "ar": "بناء متين"
+      "ar": "تخزين الذاكرة"
+    },
+    {
+      "en": "Portable size",
+      "ar": "تعمل بالبطارية"
     },
     {
       "en": "Easy to use interface",
-      "ar": "شاشة رقمية"
-    },
-    {
-      "en": "Auto shut-off",
-      "ar": "واجهة سهلة الاستخدام"
+      "ar": "تصميم خفيف الوزن"
     }
   ],
-  "rating": 3.7,
+  "rating": 3.8,
   "isNew": false,
-  "isFeatured": false,
-  "isPopular": false
+  "isFeatured": true,
+  "isPopular": true
 });
 
 db.products.insertOne({
@@ -553,40 +553,40 @@ db.products.insertOne({
     "ar": "جهاز تتبع اللياقة الرقمي"
   },
   "description": {
-    "en": "Precision engineered medical equipment for healthcare professionals",
-    "ar": "معدات طبية مصممة بدقة هندسية لمحترفي الرعاية الصحية"
+    "en": "Clinical grade medical instrument for precise measurements",
+    "ar": "أجهزة طبية من الفئة السريرية لقياسات دقيقة"
   },
   "category": "medical",
-  "price": 40.63,
-  "originalPrice": 45.1,
-  "stock": 195,
+  "price": 482.98,
+  "originalPrice": 679.9,
+  "stock": 112,
   "images": [
     "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1622059342013-b00f0dc009c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzU5MDc2ODUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
     "https://images.unsplash.com/photo-1586982919593-70f5fd07bd58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGV0aG9zY29wZXxlbnwwfHx8fDE3NTkwNzY4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
-      "en": "Lightweight design",
+      "en": "Auto shut-off",
       "ar": "تعمل بالبطارية"
     },
     {
-      "en": "Memory storage",
+      "en": "Battery operated",
+      "ar": "قياس عالي الدقة"
+    },
+    {
+      "en": "Durable construction",
       "ar": "شاشة رقمية"
     },
     {
-      "en": "Alarm function",
-      "ar": "تخزين الذاكرة"
-    },
-    {
-      "en": "Battery operated",
-      "ar": "إيقاف تلقائي"
+      "en": "Digital display",
+      "ar": "وظيفة الإنذار"
     }
   ],
-  "rating": 4.1,
+  "rating": 4.7,
   "isNew": true,
   "isFeatured": false,
-  "isPopular": false
+  "isPopular": true
 });
 
 db.products.insertOne({
@@ -595,39 +595,39 @@ db.products.insertOne({
     "ar": "عبوة دروع وجه طبية"
   },
   "description": {
-    "en": "Reliable medical apparatus for continuous health monitoring",
-    "ar": "معدات طبية موثوقة للإشراف الصحي المستمر"
+    "en": "Precision engineered medical equipment for healthcare professionals",
+    "ar": "معدات طبية مصممة بدقة هندسية لمحترفي الرعاية الصحية"
   },
   "category": "medical",
-  "price": 302.78,
-  "originalPrice": 409.71,
-  "stock": 196,
+  "price": 297.63,
+  "originalPrice": 368.82,
+  "stock": 125,
   "images": [
+    "https://images.unsplash.com/photo-1586982919593-70f5fd07bd58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGV0aG9zY29wZXxlbnwwfHx8fDE3NTkwNzY4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1584456319363-d6a9ca8d25c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0Nnw&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1622059342013-b00f0dc009c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzU5MDc2ODUxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "https://images.unsplash.com/photo-1584456319363-d6a9ca8d25c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0Nnw&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
-      "en": "Alarm function",
+      "en": "Memory storage",
+      "ar": "إيقاف تلقائي"
+    },
+    {
+      "en": "Durable construction",
       "ar": "قياس عالي الدقة"
     },
     {
-      "en": "Lightweight design",
-      "ar": "واجهة سهلة الاستخدام"
-    },
-    {
-      "en": "Auto shut-off",
-      "ar": "حجم محمول"
+      "en": "Digital display",
+      "ar": "تصميم خفيف الوزن"
     },
     {
       "en": "Easy to use interface",
-      "ar": "بناء متين"
+      "ar": "شاشة رقمية"
     }
   ],
-  "rating": 3.6,
+  "rating": 3.8,
   "isNew": true,
-  "isFeatured": false,
+  "isFeatured": true,
   "isPopular": false
 });
 
@@ -637,40 +637,40 @@ db.products.insertOne({
     "ar": "قفازات طبية قابلة للتصرف"
   },
   "description": {
-    "en": "State-of-the-art medical technology for improved patient outcomes",
-    "ar": "أحدث تقنيات الأجهزة الطبية لتحسين نتائج المرضى"
+    "en": "High-quality medical device designed for patient care",
+    "ar": "معدات طبية عالية الجودة مصممة للعناية بالمرضى"
   },
   "category": "medical",
-  "price": 183.19,
-  "originalPrice": 263.02,
-  "stock": 169,
+  "price": 284.28,
+  "originalPrice": 389.11,
+  "stock": 49,
   "images": [
-    "https://images.unsplash.com/photo-1584456319363-d6a9ca8d25c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0Nnw&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "https://images.unsplash.com/photo-1586982919593-70f5fd07bd58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGV0aG9zY29wZXxlbnwwfHx8fDE3NTkwNzY4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
-      "en": "Portable size",
+      "en": "Memory storage",
       "ar": "تخزين الذاكرة"
     },
     {
-      "en": "Battery operated",
-      "ar": "قياس عالي الدقة"
+      "en": "Alarm function",
+      "ar": "بناء متين"
     },
     {
-      "en": "Lightweight design",
-      "ar": "إيقاف تلقائي"
-    },
-    {
-      "en": "Durable construction",
+      "en": "Portable size",
       "ar": "وظيفة الإنذار"
+    },
+    {
+      "en": "Easy to use interface",
+      "ar": "قياس عالي الدقة"
     }
   ],
-  "rating": 4.8,
+  "rating": 4.1,
   "isNew": true,
   "isFeatured": false,
-  "isPopular": false
+  "isPopular": true
 });
 
 db.products.insertOne({
@@ -679,37 +679,37 @@ db.products.insertOne({
     "ar": "هل ت sanitizer الطبي"
   },
   "description": {
-    "en": "Clinical grade medical instrument for precise measurements",
-    "ar": "أجهزة طبية من الفئة السريرية لقياسات دقيقة"
+    "en": "Reliable medical apparatus for continuous health monitoring",
+    "ar": "معدات طبية موثوقة للإشراف الصحي المستمر"
   },
   "category": "medical",
-  "price": 246.12,
-  "originalPrice": 342.6,
-  "stock": 7,
+  "price": 427.57,
+  "originalPrice": 517.9,
+  "stock": 130,
   "images": [
-    "https://images.unsplash.com/photo-1584456319363-d6a9ca8d25c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0Nnw&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1586982919593-70f5fd07bd58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGV0aG9zY29wZXxlbnwwfHx8fDE3NTkwNzY4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080"
+    "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1622059342013-b00f0dc009c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzU5MDc2ODUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1586498847547-1c1e45b809d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwbW9uaXRvcnxlbnwwfHx8fDE3NTkwNzY4NTB8MA&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
-      "en": "Durable construction",
-      "ar": "شاشة رقمية"
+      "en": "High precision measurement",
+      "ar": "تخزين الذاكرة"
     },
     {
       "en": "Easy to use interface",
-      "ar": "قياس عالي الدقة"
+      "ar": "بناء متين"
     },
     {
       "en": "Alarm function",
-      "ar": "واجهة سهلة الاستخدام"
+      "ar": "إيقاف تلقائي"
     },
     {
-      "en": "Digital display",
-      "ar": "تعمل بالبطارية"
+      "en": "Portable size",
+      "ar": "وظيفة الإنذار"
     }
   ],
-  "rating": 4.6,
+  "rating": 3.8,
   "isNew": true,
   "isFeatured": false,
   "isPopular": false
@@ -721,37 +721,37 @@ db.products.insertOne({
     "ar": "أقنعة وجه جراحية"
   },
   "description": {
-    "en": "Professional medical device for accurate monitoring and diagnosis",
-    "ar": "جهاز طبي احترافي لمراقبة وتشخيص دقيقة"
+    "en": "Clinical grade medical instrument for precise measurements",
+    "ar": "أجهزة طبية من الفئة السريرية لقياسات دقيقة"
   },
   "category": "medical",
-  "price": 32.02,
-  "originalPrice": 45.73,
-  "stock": 88,
+  "price": 244.41,
+  "originalPrice": 360.79,
+  "stock": 22,
   "images": [
     "https://images.unsplash.com/photo-1586498847547-1c1e45b809d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwbW9uaXRvcnxlbnwwfHx8fDE3NTkwNzY4NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080"
+    "https://images.unsplash.com/photo-1584456319363-d6a9ca8d25c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0Nnw&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
-      "en": "Battery operated",
-      "ar": "واجهة سهلة الاستخدام"
-    },
-    {
-      "en": "Durable construction",
-      "ar": "قياس عالي الدقة"
-    },
-    {
-      "en": "Auto shut-off",
+      "en": "Alarm function",
       "ar": "بناء متين"
     },
     {
-      "en": "Portable size",
+      "en": "Durable construction",
       "ar": "وظيفة الإنذار"
+    },
+    {
+      "en": "Easy to use interface",
+      "ar": "إيقاف تلقائي"
+    },
+    {
+      "en": "Lightweight design",
+      "ar": "واجهة سهلة الاستخدام"
     }
   ],
-  "rating": 4.3,
+  "rating": 3.9,
   "isNew": false,
   "isFeatured": false,
   "isPopular": true
@@ -763,40 +763,40 @@ db.products.insertOne({
     "ar": "حافظة ميزان الحرارة الطبية"
   },
   "description": {
-    "en": "Reliable medical apparatus for continuous health monitoring",
-    "ar": "معدات طبية موثوقة للإشراف الصحي المستمر"
+    "en": "High-quality medical device designed for patient care",
+    "ar": "معدات طبية عالية الجودة مصممة للعناية بالمرضى"
   },
   "category": "medical",
-  "price": 315.19,
-  "originalPrice": 452.89,
-  "stock": 162,
+  "price": 154.23,
+  "originalPrice": 210.78,
+  "stock": 154,
   "images": [
+    "https://images.unsplash.com/photo-1622059342013-b00f0dc009c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzU5MDc2ODUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
     "https://images.unsplash.com/photo-1586498847547-1c1e45b809d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwbW9uaXRvcnxlbnwwfHx8fDE3NTkwNzY4NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1584456319363-d6a9ca8d25c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0Nnw&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1586982919593-70f5fd07bd58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGV0aG9zY29wZXxlbnwwfHx8fDE3NTkwNzY4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
-    {
-      "en": "Durable construction",
-      "ar": "واجهة سهلة الاستخدام"
-    },
-    {
-      "en": "Battery operated",
-      "ar": "بناء متين"
-    },
     {
       "en": "Portable size",
       "ar": "وظيفة الإنذار"
     },
     {
       "en": "Lightweight design",
-      "ar": "شاشة رقمية"
+      "ar": "بناء متين"
+    },
+    {
+      "en": "Battery operated",
+      "ar": "تخزين الذاكرة"
+    },
+    {
+      "en": "Durable construction",
+      "ar": "تعمل بالبطارية"
     }
   ],
-  "rating": 4.7,
+  "rating": 3.7,
   "isNew": false,
   "isFeatured": false,
-  "isPopular": true
+  "isPopular": false
 });
 
 db.products.insertOne({
@@ -805,40 +805,40 @@ db.products.insertOne({
     "ar": "عصا مشية طبية"
   },
   "description": {
-    "en": "Precision engineered medical equipment for healthcare professionals",
-    "ar": "معدات طبية مصممة بدقة هندسية لمحترفي الرعاية الصحية"
+    "en": "Essential medical tool for healthcare facilities and home use",
+    "ar": "أداة طبية أساسية لمرافق الرعاية الصحية والاستخدام المنزلي"
   },
   "category": "medical",
-  "price": 313.82,
-  "originalPrice": 400.67,
-  "stock": 158,
+  "price": 459.09,
+  "originalPrice": 572.55,
+  "stock": 87,
   "images": [
     "https://images.unsplash.com/photo-1584456319363-d6a9ca8d25c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0Nnw&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1622059342013-b00f0dc009c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzU5MDc2ODUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1586498847547-1c1e45b809d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwbW9uaXRvcnxlbnwwfHx8fDE3NTkwNzY4NTB8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
-      "en": "Lightweight design",
+      "en": "Portable size",
       "ar": "تصميم خفيف الوزن"
     },
     {
-      "en": "Battery operated",
-      "ar": "تخزين الذاكرة"
-    },
-    {
-      "en": "Portable size",
-      "ar": "قياس عالي الدقة"
-    },
-    {
-      "en": "Durable construction",
+      "en": "Digital display",
       "ar": "واجهة سهلة الاستخدام"
+    },
+    {
+      "en": "High precision measurement",
+      "ar": "تعمل بالبطارية"
+    },
+    {
+      "en": "Easy to use interface",
+      "ar": "تخزين الذاكرة"
     }
   ],
-  "rating": 4.6,
-  "isNew": true,
-  "isFeatured": true,
-  "isPopular": false
+  "rating": 4.5,
+  "isNew": false,
+  "isFeatured": false,
+  "isPopular": true
 });
 
 db.products.insertOne({
@@ -847,40 +847,40 @@ db.products.insertOne({
     "ar": "جوارب ضغط طبية"
   },
   "description": {
-    "en": "Durable medical equipment built for longevity and performance",
-    "ar": " equipments طبية متينة مبنية على المتانة والأداء"
+    "en": "High-quality medical device designed for patient care",
+    "ar": "معدات طبية عالية الجودة مصممة للعناية بالمرضى"
   },
   "category": "medical",
-  "price": 30.49,
-  "originalPrice": 41.75,
-  "stock": 100,
+  "price": 354.01,
+  "originalPrice": 483.41,
+  "stock": 66,
   "images": [
     "https://images.unsplash.com/photo-1584456319363-d6a9ca8d25c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0Nnw&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1586982919593-70f5fd07bd58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGV0aG9zY29wZXxlbnwwfHx8fDE3NTkwNzY4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "https://images.unsplash.com/photo-1586982919593-70f5fd07bd58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGV0aG9zY29wZXxlbnwwfHx8fDE3NTkwNzY4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
-      "en": "Durable construction",
-      "ar": "بناء متين"
+      "en": "Portable size",
+      "ar": "تصميم خفيف الوزن"
     },
     {
-      "en": "Digital display",
+      "en": "Alarm function",
       "ar": "تعمل بالبطارية"
     },
     {
-      "en": "Auto shut-off",
-      "ar": "حجم محمول"
+      "en": "Memory storage",
+      "ar": "شاشة رقمية"
     },
     {
-      "en": "Portable size",
-      "ar": "قياس عالي الدقة"
+      "en": "High precision measurement",
+      "ar": "وظيفة الإنذار"
     }
   ],
-  "rating": 3.7,
+  "rating": 3.5,
   "isNew": false,
   "isFeatured": false,
-  "isPopular": false
+  "isPopular": true
 });
 
 db.products.insertOne({
@@ -889,40 +889,40 @@ db.products.insertOne({
     "ar": "ميزان نسبة الدهون في الجسم الرقمي"
   },
   "description": {
-    "en": "Advanced healthcare equipment for home medical care",
-    "ar": "معدات رعاية صحية متقدمة للعناية الطبية المنزلية"
+    "en": "Precision engineered medical equipment for healthcare professionals",
+    "ar": "معدات طبية مصممة بدقة هندسية لمحترفي الرعاية الصحية"
   },
   "category": "medical",
-  "price": 442.14,
-  "originalPrice": 653.21,
-  "stock": 86,
+  "price": 240.82,
+  "originalPrice": 302.84,
+  "stock": 52,
   "images": [
-    "https://images.unsplash.com/photo-1584456319363-d6a9ca8d25c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0Nnw&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "https://images.unsplash.com/photo-1586498847547-1c1e45b809d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwbW9uaXRvcnxlbnwwfHx8fDE3NTkwNzY4NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1584456319363-d6a9ca8d25c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0Nnw&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
-      "en": "High precision measurement",
+      "en": "Easy to use interface",
+      "ar": "تصميم خفيف الوزن"
+    },
+    {
+      "en": "Lightweight design",
       "ar": "شاشة رقمية"
     },
     {
-      "en": "Durable construction",
-      "ar": "تخزين الذاكرة"
-    },
-    {
-      "en": "Memory storage",
+      "en": "Auto shut-off",
       "ar": "وظيفة الإنذار"
     },
     {
-      "en": "Digital display",
-      "ar": "بناء متين"
+      "en": "High precision measurement",
+      "ar": "واجهة سهلة الاستخدام"
     }
   ],
   "rating": 3.7,
   "isNew": false,
-  "isFeatured": false,
-  "isPopular": true
+  "isFeatured": true,
+  "isPopular": false
 });
 
 db.products.insertOne({
@@ -931,38 +931,38 @@ db.products.insertOne({
     "ar": "مصباح فحص طبي"
   },
   "description": {
-    "en": "Professional medical device for accurate monitoring and diagnosis",
-    "ar": "جهاز طبي احترافي لمراقبة وتشخيص دقيقة"
+    "en": "Essential medical tool for healthcare facilities and home use",
+    "ar": "أداة طبية أساسية لمرافق الرعاية الصحية والاستخدام المنزلي"
   },
   "category": "medical",
-  "price": 129.39,
-  "originalPrice": 149.38,
-  "stock": 27,
+  "price": 330.94,
+  "originalPrice": 485.79,
+  "stock": 58,
   "images": [
-    "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1586982919593-70f5fd07bd58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGV0aG9zY29wZXxlbnwwfHx8fDE3NTkwNzY4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1584456319363-d6a9ca8d25c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0Nnw&ixlib=rb-4.1.0&q=80&w=1080"
+    "https://images.unsplash.com/photo-1586498847547-1c1e45b809d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwbW9uaXRvcnxlbnwwfHx8fDE3NTkwNzY4NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1622059342013-b00f0dc009c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzU5MDc2ODUxfDA&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
-      "en": "Battery operated",
-      "ar": "واجهة سهلة الاستخدام"
+      "en": "Portable size",
+      "ar": "تعمل بالبطارية"
     },
     {
       "en": "High precision measurement",
+      "ar": "إيقاف تلقائي"
+    },
+    {
+      "en": "Memory storage",
+      "ar": "تخزين الذاكرة"
+    },
+    {
+      "en": "Easy to use interface",
       "ar": "قياس عالي الدقة"
-    },
-    {
-      "en": "Portable size",
-      "ar": "بناء متين"
-    },
-    {
-      "en": "Lightweight design",
-      "ar": "حجم محمول"
     }
   ],
-  "rating": 3.9,
-  "isNew": false,
+  "rating": 5,
+  "isNew": true,
   "isFeatured": false,
   "isPopular": false
 });
@@ -973,40 +973,40 @@ db.products.insertOne({
     "ar": "عدة إسعاف أولي احترافية"
   },
   "description": {
-    "en": "High-quality medical device designed for patient care",
-    "ar": "معدات طبية عالية الجودة مصممة للعناية بالمرضى"
+    "en": "Advanced healthcare equipment for home medical care",
+    "ar": "معدات رعاية صحية متقدمة للعناية الطبية المنزلية"
   },
   "category": "medical",
-  "price": 20.96,
-  "originalPrice": 23.33,
-  "stock": 160,
+  "price": 323.5,
+  "originalPrice": 465.51,
+  "stock": 47,
   "images": [
-    "https://images.unsplash.com/photo-1586498847547-1c1e45b809d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwbW9uaXRvcnxlbnwwfHx8fDE3NTkwNzY4NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080"
+    "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1586982919593-70f5fd07bd58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGV0aG9zY29wZXxlbnwwfHx8fDE3NTkwNzY4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
-      "en": "High precision measurement",
+      "en": "Portable size",
       "ar": "وظيفة الإنذار"
     },
     {
-      "en": "Auto shut-off",
-      "ar": "تعمل بالبطارية"
+      "en": "High precision measurement",
+      "ar": "تخزين الذاكرة"
     },
     {
-      "en": "Durable construction",
-      "ar": "حجم محمول"
-    },
-    {
-      "en": "Battery operated",
+      "en": "Easy to use interface",
       "ar": "واجهة سهلة الاستخدام"
+    },
+    {
+      "en": "Digital display",
+      "ar": "إيقاف تلقائي"
     }
   ],
-  "rating": 3.8,
+  "rating": 3.9,
   "isNew": false,
-  "isFeatured": false,
-  "isPopular": false
+  "isFeatured": true,
+  "isPopular": true
 });
 
 db.products.insertOne({
@@ -1015,40 +1015,40 @@ db.products.insertOne({
     "ar": "مناديل كحول طبية"
   },
   "description": {
-    "en": "Professional medical device for accurate monitoring and diagnosis",
-    "ar": "جهاز طبي احترافي لمراقبة وتشخيص دقيقة"
+    "en": "Innovative medical device with cutting-edge technology",
+    "ar": "جهاز طبي مبتكر بتقنية متطورة"
   },
   "category": "medical",
-  "price": 190.32,
-  "originalPrice": 211.63,
-  "stock": 53,
+  "price": 411.76,
+  "originalPrice": 611.08,
+  "stock": 128,
   "images": [
-    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1586982919593-70f5fd07bd58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGV0aG9zY29wZXxlbnwwfHx8fDE3NTkwNzY4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "https://images.unsplash.com/photo-1584456319363-d6a9ca8d25c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0Nnw&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1622059342013-b00f0dc009c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzU5MDc2ODUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
-      "en": "Lightweight design",
-      "ar": "بناء متين"
+      "en": "Durable construction",
+      "ar": "تصميم خفيف الوزن"
     },
     {
-      "en": "Auto shut-off",
-      "ar": "تخزين الذاكرة"
+      "en": "Battery operated",
+      "ar": "قياس عالي الدقة"
     },
     {
-      "en": "Memory storage",
-      "ar": "واجهة سهلة الاستخدام"
-    },
-    {
-      "en": "Digital display",
+      "en": "Easy to use interface",
       "ar": "شاشة رقمية"
+    },
+    {
+      "en": "High precision measurement",
+      "ar": "بناء متين"
     }
   ],
-  "rating": 3.6,
+  "rating": 4.4,
   "isNew": true,
   "isFeatured": false,
-  "isPopular": false
+  "isPopular": true
 });
 
 db.products.insertOne({
@@ -1057,37 +1057,37 @@ db.products.insertOne({
     "ar": "مجموعة أنابيب سحب الدم"
   },
   "description": {
-    "en": "High-quality medical device designed for patient care",
-    "ar": "معدات طبية عالية الجودة مصممة للعناية بالمرضى"
+    "en": "Essential medical tool for healthcare facilities and home use",
+    "ar": "أداة طبية أساسية لمرافق الرعاية الصحية والاستخدام المنزلي"
   },
   "category": "medical",
-  "price": 347.21,
-  "originalPrice": 441.89,
-  "stock": 79,
+  "price": 331.59,
+  "originalPrice": 422.39,
+  "stock": 97,
   "images": [
     "https://images.unsplash.com/photo-1586498847547-1c1e45b809d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwbW9uaXRvcnxlbnwwfHx8fDE3NTkwNzY4NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1586982919593-70f5fd07bd58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGV0aG9zY29wZXxlbnwwfHx8fDE3NTkwNzY4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1622059342013-b00f0dc009c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzU5MDc2ODUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
     "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
       "en": "High precision measurement",
-      "ar": "قياس عالي الدقة"
-    },
-    {
-      "en": "Easy to use interface",
-      "ar": "واجهة سهلة الاستخدام"
-    },
-    {
-      "en": "Battery operated",
-      "ar": "تصميم خفيف الوزن"
+      "ar": "شاشة رقمية"
     },
     {
       "en": "Alarm function",
-      "ar": "شاشة رقمية"
+      "ar": "قياس عالي الدقة"
+    },
+    {
+      "en": "Memory storage",
+      "ar": "تخزين الذاكرة"
+    },
+    {
+      "en": "Auto shut-off",
+      "ar": "إيقاف تلقائي"
     }
   ],
-  "rating": 4.5,
+  "rating": 4.4,
   "isNew": false,
   "isFeatured": false,
   "isPopular": false
@@ -1099,40 +1099,40 @@ db.products.insertOne({
     "ar": "مجموعة حقن طبية"
   },
   "description": {
-    "en": "Essential medical tool for healthcare facilities and home use",
-    "ar": "أداة طبية أساسية لمرافق الرعاية الصحية والاستخدام المنزلي"
+    "en": "Reliable medical apparatus for continuous health monitoring",
+    "ar": "معدات طبية موثوقة للإشراف الصحي المستمر"
   },
   "category": "medical",
-  "price": 73.75,
-  "originalPrice": 106.39,
-  "stock": 31,
+  "price": 139.47,
+  "originalPrice": 174.58,
+  "stock": 161,
   "images": [
+    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     "https://images.unsplash.com/photo-1586498847547-1c1e45b809d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwbW9uaXRvcnxlbnwwfHx8fDE3NTkwNzY4NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1584456319363-d6a9ca8d25c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0Nnw&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080"
+    "https://images.unsplash.com/photo-1586982919593-70f5fd07bd58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGV0aG9zY29wZXxlbnwwfHx8fDE3NTkwNzY4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
       "en": "Easy to use interface",
-      "ar": "واجهة سهلة الاستخدام"
-    },
-    {
-      "en": "Auto shut-off",
       "ar": "قياس عالي الدقة"
     },
     {
       "en": "Portable size",
-      "ar": "تصميم خفيف الوزن"
+      "ar": "تعمل بالبطارية"
     },
     {
-      "en": "High precision measurement",
-      "ar": "وظيفة الإنذار"
+      "en": "Alarm function",
+      "ar": "واجهة سهلة الاستخدام"
+    },
+    {
+      "en": "Battery operated",
+      "ar": "تخزين الذاكرة"
     }
   ],
-  "rating": 4.7,
+  "rating": 4.3,
   "isNew": false,
-  "isFeatured": false,
-  "isPopular": true
+  "isFeatured": true,
+  "isPopular": false
 });
 
 db.products.insertOne({
@@ -1141,40 +1141,40 @@ db.products.insertOne({
     "ar": "عدة اختبار الحمل الرقمية"
   },
   "description": {
-    "en": "Advanced healthcare equipment for home medical care",
-    "ar": "معدات رعاية صحية متقدمة للعناية الطبية المنزلية"
+    "en": "Essential medical tool for healthcare facilities and home use",
+    "ar": "أداة طبية أساسية لمرافق الرعاية الصحية والاستخدام المنزلي"
   },
   "category": "medical",
-  "price": 17.92,
-  "originalPrice": 21.35,
-  "stock": 132,
+  "price": 117.35,
+  "originalPrice": 171.9,
+  "stock": 177,
   "images": [
-    "https://images.unsplash.com/photo-1622059342013-b00f0dc009c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzU5MDc2ODUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1586498847547-1c1e45b809d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwbW9uaXRvcnxlbnwwfHx8fDE3NTkwNzY4NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "https://images.unsplash.com/photo-1586982919593-70f5fd07bd58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGV0aG9zY29wZXxlbnwwfHx8fDE3NTkwNzY4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
-      "en": "Digital display",
+      "en": "High precision measurement",
       "ar": "قياس عالي الدقة"
     },
     {
-      "en": "Battery operated",
-      "ar": "واجهة سهلة الاستخدام"
-    },
-    {
-      "en": "High precision measurement",
-      "ar": "حجم محمول"
+      "en": "Auto shut-off",
+      "ar": "إيقاف تلقائي"
     },
     {
       "en": "Easy to use interface",
-      "ar": "بناء متين"
+      "ar": "تعمل بالبطارية"
+    },
+    {
+      "en": "Lightweight design",
+      "ar": "واجهة سهلة الاستخدام"
     }
   ],
-  "rating": 4,
-  "isNew": true,
-  "isFeatured": false,
-  "isPopular": true
+  "rating": 4.3,
+  "isNew": false,
+  "isFeatured": true,
+  "isPopular": false
 });
 
 db.products.insertOne({
@@ -1183,40 +1183,40 @@ db.products.insertOne({
     "ar": "مجموعة مسحات قطنية طبية"
   },
   "description": {
-    "en": "Innovative medical device with cutting-edge technology",
-    "ar": "جهاز طبي مبتكر بتقنية متطورة"
+    "en": "Professional medical device for accurate monitoring and diagnosis",
+    "ar": "جهاز طبي احترافي لمراقبة وتشخيص دقيقة"
   },
   "category": "medical",
-  "price": 229.77,
-  "originalPrice": 294.54,
-  "stock": 124,
+  "price": 49.73,
+  "originalPrice": 57.68,
+  "stock": 155,
   "images": [
-    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1586982919593-70f5fd07bd58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGV0aG9zY29wZXxlbnwwfHx8fDE3NTkwNzY4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+    "https://images.unsplash.com/photo-1586982919593-70f5fd07bd58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdGV0aG9zY29wZXxlbnwwfHx8fDE3NTkwNzY4NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1622059342013-b00f0dc009c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzU5MDc2ODUxfDA&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
-      "en": "Battery operated",
+      "en": "Auto shut-off",
       "ar": "وظيفة الإنذار"
     },
     {
-      "en": "High precision measurement",
-      "ar": "حجم محمول"
-    },
-    {
       "en": "Alarm function",
-      "ar": "تخزين الذاكرة"
+      "ar": "إيقاف تلقائي"
     },
     {
-      "en": "Auto shut-off",
-      "ar": "إيقاف تلقائي"
+      "en": "Memory storage",
+      "ar": "قياس عالي الدقة"
+    },
+    {
+      "en": "Portable size",
+      "ar": "واجهة سهلة الاستخدام"
     }
   ],
-  "rating": 4.1,
+  "rating": 4.9,
   "isNew": true,
-  "isFeatured": true,
-  "isPopular": false
+  "isFeatured": false,
+  "isPopular": true
 });
 
 db.products.insertOne({
@@ -1225,38 +1225,38 @@ db.products.insertOne({
     "ar": "بطانية طبية طارئة"
   },
   "description": {
-    "en": "Durable medical equipment built for longevity and performance",
-    "ar": " equipments طبية متينة مبنية على المتانة والأداء"
+    "en": "Clinical grade medical instrument for precise measurements",
+    "ar": "أجهزة طبية من الفئة السريرية لقياسات دقيقة"
   },
   "category": "medical",
-  "price": 21.16,
-  "originalPrice": 29.16,
-  "stock": 5,
+  "price": 32.22,
+  "originalPrice": 40.63,
+  "stock": 184,
   "images": [
-    "https://images.unsplash.com/photo-1586498847547-1c1e45b809d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwbW9uaXRvcnxlbnwwfHx8fDE3NTkwNzY4NTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "https://images.unsplash.com/photo-1622059342013-b00f0dc009c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwaW5zdHJ1bWVudHN8ZW58MHx8fHwxNzU5MDc2ODUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGhlcm1vbWV0ZXJ8ZW58MHx8fHwxNzU5MDc2ODQ5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "https://images.unsplash.com/photo-1584456319363-d6a9ca8d25c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0Nnw&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGhjYXJlJTIwZXF1aXBtZW50fGVufDB8fHx8MTc1OTA3Njg0OHw&ixlib=rb-4.1.0&q=80&w=1080"
   ],
   "features": [
     {
-      "en": "Alarm function",
+      "en": "Digital display",
       "ar": "قياس عالي الدقة"
     },
     {
       "en": "Durable construction",
-      "ar": "وظيفة الإنذار"
+      "ar": "واجهة سهلة الاستخدام"
     },
     {
       "en": "Easy to use interface",
-      "ar": "تعمل بالبطارية"
+      "ar": "إيقاف تلقائي"
     },
     {
       "en": "Lightweight design",
       "ar": "حجم محمول"
     }
   ],
-  "rating": 4.3,
-  "isNew": false,
+  "rating": 4.2,
+  "isNew": true,
   "isFeatured": false,
   "isPopular": false
 });
