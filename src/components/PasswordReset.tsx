@@ -147,8 +147,9 @@ export function PasswordReset() {
               </div>
             </div>
           </CardContent>
-          <CardFooter className="flex flex-col space-y-3">
+          <CardFooter className="flex flex-col space-y-3 bg-transparent pb-0 mt-3">
             <Button
+              size={"sm"}
               type="submit"
               className="w-full bg-green-600 hover:bg-green-700 text-white"
               disabled={isLoading}
