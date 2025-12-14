@@ -146,6 +146,11 @@ export function LoginModal() {
       const data = await authAPI.login(loginForm);
 
       setUser(data.user);
+      try {
+        localStorage.setItem('user', JSON.stringify(data.user));
+      } catch (e) {
+        // ignore
+      }
       setShowLoginModal(false);
       toast.success(`${t.loginSuccess} ${t.welcome}, ${data.user.name}!`);
 
@@ -202,6 +207,11 @@ export function LoginModal() {
       });
 
       setUser(data.user);
+      try {
+        localStorage.setItem('user', JSON.stringify(data.user));
+      } catch (e) {
+        // ignore
+      }
       setShowLoginModal(false);
       toast.success(`${t.registerSuccess} ${t.welcome}, ${data.user.name}!`);
 
@@ -286,7 +296,13 @@ export function LoginModal() {
 
     if (token && user) {
       localStorage.setItem('authToken', token);
-      setUser(JSON.parse(decodeURIComponent(user)));
+      const parsedUser = JSON.parse(decodeURIComponent(user));
+      setUser(parsedUser);
+      try {
+        localStorage.setItem('user', JSON.stringify(parsedUser));
+      } catch (e) {
+        // ignore
+      }
       setShowLoginModal(false);
       toast.success(`${t.loginSuccess} ${t.welcome}!`);
 
