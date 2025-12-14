@@ -104,7 +104,7 @@ export function NotificationBell() {
       setUnreadCount(countData.count || 0);
     } catch (error: any) {
       console.error('Failed to load notifications:', error);
-      
+
       // Retry logic for network errors
       if (retryCount < 3 && (error.message.includes('Network Error') || error.message.includes('timeout'))) {
         setTimeout(() => {
@@ -169,7 +169,7 @@ export function NotificationBell() {
             <div className="w-2 h-2 bg-blue-500 rounded-full animate-ping"></div>
           )}
           {unreadCount > 0 && (
-            <Badge className="bg-green-500 text-white text-xs font-bold min-w-[1.25rem] h-5 flex items-center justify-center rounded-full shadow-lg animate-pulse absolute top-0 right-0" style={{ padding: '4px' }}>
+            <Badge className="bg-green-500 text-white min-w-[1.25rem] h-5 flex items-center justify-center rounded-full shadow-lg animate-pulse absolute top-0 right-0" style={{ padding: '5px' }}>
               {unreadCount > 99 ? '99+' : unreadCount}
             </Badge>
           )}
@@ -179,7 +179,7 @@ export function NotificationBell() {
         <div className="flex items-center justify-between p-4 border-b">
           <h3 className="font-semibold">{t.notifications}</h3>
           <div className="flex items-center gap-2">
-            <select 
+            <select
               value={filter}
               onChange={(e) => setFilter(e.target.value as any)}
               className="text-xs border rounded px-2 py-1 bg-white"
@@ -200,7 +200,7 @@ export function NotificationBell() {
             )}
           </div>
         </div>
-        <ScrollArea className="h-96 rounded-lg">
+        <div>
           {loading ? (
             <div className="flex items-center justify-center p-8">
               <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-green-600"></div>
@@ -210,7 +210,7 @@ export function NotificationBell() {
               {t.noNotifications}
             </div>
           ) : (
-             <div className="divide-y border-t border-b border-gray-100 rounded-lg">
+            <div className="divide-y border-t border-b border-gray-100 rounded-lg">
               {notifications
                 .filter(notification => {
                   if (filter === 'unread') return !notification.isRead;
@@ -220,11 +220,10 @@ export function NotificationBell() {
                 .map((notification) => (
                   <div
                     key={notification.id}
-                    className={`p-4 cursor-pointer transition-all duration-200 rounded-none first:rounded-t-lg last:rounded-b-lg ${
-                      !notification.isRead 
-                        ? 'bg-green-50 border-l-4 border-green-500 hover:bg-green-100' 
-                        : 'bg-white hover:bg-gray-50'
-                    }`}
+                    className={`p-4 cursor-pointer transition-all duration-200 rounded-none first:rounded-t-lg last:rounded-b-lg ${!notification.isRead
+                      ? 'bg-green-50 border-l-4 border-green-500 hover:bg-green-100'
+                      : 'bg-white hover:bg-gray-50'
+                      }`}
                     onClick={() => handleNotificationClick(notification)}
                   >
                     <div className="flex items-start justify-between gap-3">
@@ -269,7 +268,7 @@ export function NotificationBell() {
               }
             </div>
           )}
-        </ScrollArea>
+        </div>
       </PopoverContent>
     </Popover>
   );
