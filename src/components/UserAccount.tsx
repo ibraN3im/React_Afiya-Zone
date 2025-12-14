@@ -697,17 +697,17 @@ export function UserAccount() {
                         }}
                         className="border-green-100 order-history order-border"
                       >
-                        <CardContent className="p-6">
+                        <CardContent className="p-2">
                           <div className="flex items-center justify-between mb-4">
                             <div>
-                              <h3 className="text-green-800">{t.orderNumber} {order.orderNumber || order.id}</h3>
+                              <h5 className="text-green-800">{t.orderNumber} {order.orderNumber || order.id}</h5>
                               <p className="text-gray-600 text-sm">
-                                {new Date(order.createdAt || order.date).toLocaleDateString(language === 'ar' ? 'ar-SA' : 'en-US')}
+                                {new Date(order.createdAt || order.date).toLocaleDateString('en-US')}
                               </p>
                             </div>
                             <div className="text-right">
                               {getStatusBadge(order.status)}
-                              <p className="text-lg text-green-700 mt-1">AED {order.total.toFixed(2)}</p>
+                              <p className="text-green-700 mt-1">AED {order.total.toFixed(2)}</p>
                             </div>
                           </div>
 
