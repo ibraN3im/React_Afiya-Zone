@@ -1392,6 +1392,7 @@ a:hover {
 
 .table-view {
     display: flex;
+     overflow: auto;
     font-size: small;
 }
 
