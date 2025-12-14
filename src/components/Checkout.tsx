@@ -29,8 +29,8 @@ const translations = {
     phone: 'Phone',
     address: 'Address',
     city: 'City',
-    state: 'State/Province',
-    zipCode: 'ZIP/Postal Code',
+    state: 'State',
+    zipCode: 'ZIP/Code',
     country: 'Country',
     cardNumber: 'Card Number',
     expiryDate: 'Expiry Date',
@@ -76,7 +76,7 @@ const translations = {
     phone: 'الهاتف',
     address: 'العنوان',
     city: 'المدينة',
-    state: 'المنطقة/المحافظة',
+    state: 'المنطقة',
     zipCode: 'الرمز البريدي',
     country: 'البلد',
     cardNumber: 'رقم البطاقة',
@@ -577,9 +577,11 @@ export function Checkout() {
                   </Button>
 
                   {/* Security Notice */}
+                  <div className="text-center">
                   <small className="text-center text-xs text-gray-500 mt-4">
                     🔒 Your payment information is secure and encrypted
                   </small>
+                    </div>
                 </CardContent>
               </Card>
             </div>
