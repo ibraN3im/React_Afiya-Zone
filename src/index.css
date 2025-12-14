@@ -272,13 +272,6 @@
     top: -.5em;
   }
 
-  .divide-y {
-    position: sticky;
-    max-height: 600px;
-    margin-top: 885px;
-    padding: 5px;
-    background-color: hsl(0deg 0% 99.12%);
-  }
 
 
   table {
