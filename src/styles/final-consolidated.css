@@ -1043,6 +1043,10 @@ a:hover {
     gap: 1.5rem;
 }
 
+.font-11 {
+    font-size: 11px;
+}
+
 .flex-wrap {
     flex-wrap: wrap;
 }
@@ -1543,9 +1547,13 @@ header .container button {
 
 .order-details {
     background-color: azure;
-    margin: auto;
-    margin-top: 38px;
+    margin: 0px;
+    height: fit-content;
     padding: 16px;
+}
+
+.order-info-t thead {
+    font-size: 11px
 }
 
 .order-details-close {
