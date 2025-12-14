@@ -18,7 +18,7 @@ const translations = {
     shipping: 'Shipping',
     tax: 'Tax',
     total: 'Total',
-    checkout: 'Proceed to Checkout',
+    checkout: 'Check-out',
     free: 'Free',
     itemRemoved: 'Item removed from cart',
     updateQuantity: 'Quantity updated',
@@ -38,7 +38,7 @@ const translations = {
     shipping: 'الشحن',
     tax: 'الضريبة',
     total: 'المجموع',
-    checkout: 'المتابعة للدفع',
+    checkout: 'دفع',
     free: 'مجاني',
     itemRemoved: 'تم إزالة العنصر من السلة',
     updateQuantity: 'تم تحديث الكمية',
@@ -53,22 +53,22 @@ export function Cart() {
   const { language, setCurrentPage, cart, setCart } = useApp();
   const t = translations[language];
 
-  const updateQuantity = (productId: number, newQuantity: number) => {
+  const updateQuantity = (productId: string, newQuantity: number) => {
     if (newQuantity <= 0) {
       removeItem(productId);
       return;
     }
 
     setCart(cart.map(item =>
-      item.id === productId
+      item._id === productId
         ? { ...item, quantity: newQuantity }
         : item
     ));
     toast.success(t.updateQuantity);
   };
 
-  const removeItem = (productId: number) => {
-    setCart(cart.filter(item => item.id !== productId));
+  const removeItem = (productId: string) => {
+    setCart(cart.filter(item => item._id !== productId));
     toast.success(t.itemRemoved);
   };
 
@@ -126,7 +126,7 @@ export function Cart() {
           {/* Cart Items */}
           <div className="lg:col-span-2 space-y-4">
             {cart.map((item) => (
-              <Card key={item.id} className="cart-cart">
+              <Card key={item._id} className="cart-cart">
                 <div className="p-2 shopping-cart items-center">
                   {/* Product Image */}
                   <div className="flex-shrink-0">
@@ -155,7 +155,7 @@ export function Cart() {
                         <Button
                           variant="outline"
                           size="sm"
-                          onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                          onClick={() => updateQuantity(item._id, item.quantity - 1)}
                           className="w-8 h-8 p-0"
                         >
                           <Minus className="w-3 h-3" />
@@ -164,7 +164,7 @@ export function Cart() {
                         <Button
                           variant="outline"
                           size="sm"
-                          onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                          onClick={() => updateQuantity(item._id, item.quantity + 1)}
                           className="w-8 h-8 p-0"
                         >
                           <Plus className="w-3 h-3" />
@@ -180,7 +180,7 @@ export function Cart() {
                       <Button
                         variant="ghost"
                         size="sm"
-                        onClick={() => removeItem(item.id)}
+                        onClick={() => removeItem(item._id)}
                         className="text-red-600 hover:text-red-700 hover:bg-red-50"
                       >
                         <Trash2 className="w-4 h-4 mr-1" />
@@ -244,7 +244,7 @@ export function Cart() {
                 <div className='flex justify-between'>
                   <Button
                     size="sm"
-                    className="w-full bg-green-600 hover:bg-green-700 text-white py-3"
+                    className=" bg-green-600 hover:bg-green-700 text-white py-3"
                     onClick={() => setCurrentPage('checkout')}
                   >
                     {t.checkout}
@@ -254,7 +254,7 @@ export function Cart() {
                   <Button
                     variant="outline"
                     size="sm"
-                    className="w-full border-green-600 text-green-600 hover:bg-green-50"
+                    className="border-green-600 text-green-600 hover:bg-green-50"
                     onClick={() => setCurrentPage('shop')}
                   >
                     {t.continueShopping}
