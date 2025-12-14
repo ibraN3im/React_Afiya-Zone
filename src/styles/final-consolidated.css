@@ -1449,12 +1449,14 @@ header .container button {
 }
 
 .bottom-nav {
+    position: sticky;
     color: yellow;
     background-color: #00785366;
     box-shadow: 0px -1px 6px 0px yellowgreen;
     display: flex;
     height: 45px;
     width: 100%;
+    bottom: 0;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
