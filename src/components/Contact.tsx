@@ -293,29 +293,6 @@ export function Contact() {
                 </div>
               </CardContent>
             </Card>
-
-            {/* Social Media */}
-            <Card className="border-green-100">
-              <CardHeader>
-                <CardTitle className="text-xl text-green-800">{t.followUs}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 text-sm mb-4">{t.followDesc}</p>
-                <div className="flex space-x-4">
-                  {socialLinks.map((social, index) => (
-                    <a
-                      key={index}
-                      href={social.href}
-                      title={social.icon.displayName || social.icon.name}
-                      className={`w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 transition-colors ${social.color}`}
-                    >
-                      <social.icon className="w-5 h-5" />
-                    </a>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
             {/* Quick Help */}
 
             {/* <Card className="border-green-100"> */}
